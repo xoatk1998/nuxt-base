@@ -1,19 +1,20 @@
 <template>
-  <div
-    class="bg-secondary-light dark:bg-primary-dark min-h-screen flex flex-col"
-  >
-    <!-- App header -->
-    <AppHeader />
-
-    <!-- Render contents with transition -->
+  <main class="container max-w-full mx-auto bg-black-200 min-h-screen flex flex-col relative">
+    <div class="fixed top-7 flex justify-between w-full z-20 px-5">
+      <img @click="toggleMenu(true)" class="h-4 w-6 cursor-pointer" src="~/static/img/1x/back_to_home.png"
+        alt="back_to_home">
+      <img @click="toggleInfo(true)" class="h-6 w-6 cursor-pointer" src="~/static/img/info/info.png"
+        alt="info">
+    </div>
+    <Info v-if="!!openInfo" @closeInfo="toggleInfo(false)" />
+    <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)" ></Menu>
     <transition name="fade" mode="out-in">
       <Nuxt />
     </transition>
-
-    <!-- App footer -->
-    <AppFooter />
-
-    <!-- Go back to top when scrolled down -->
+  </main>
+  <!-- <div
+    class="bg-secondary-light dark:bg-primary-dark min-h-screen flex flex-col"
+  >
     <div
       class="
         flex
@@ -30,7 +31,7 @@
     >
       <BackToTop />
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -38,16 +39,27 @@ import feather from "feather-icons";
 import AppHeader from "../components/shared/AppHeader.vue";
 import AppFooter from "../components/shared/AppFooter.vue";
 import BackToTop from "../components/BackToTop.vue";
+import Info from '../components/reusable/Info.vue'
+import Menu from '../components/reusable/Menu.vue'
 export default {
   data: () => {
     return {
-      // Todo
+      openInfo: false,
+      openMenu: false
     };
   },
   mounted() {
     feather.replace();
   },
-  components: { AppFooter, BackToTop, AppHeader },
+  methods: {
+    toggleInfo(value) {
+      this.openInfo = !!value
+    },
+    toggleMenu(value) {
+      this.openMenu = !!value
+    }
+  },
+  components: { AppFooter, BackToTop, AppHeader,  Info, Menu, },
 };
 </script>
 

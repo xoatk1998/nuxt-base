@@ -8,37 +8,81 @@ export default {
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <AppBanner />
+  <div class="flex flex-col items-center font-phu-du">
+    <div class="mt-7 h-14 w-14"><img class="w-full h-auto" alt="home-logo" src="~/static/img/1x/home_logo.png"></div>
+    <img class="mx-5 scale-90" src="~/static/img/earth_in_home.png">
 
-    <ProjectsGrid />
-
-    <!-- View more projects button -->
-    <div class="mt-5 sm:mt-14 flex justify-center">
-      <NuxtLink
-        to="/projects"
-        class="
-          font-general-medium
-          flex
-          items-center
-          px-6
-          py-3
-          rounded-lg
-          shadow-lg
-          hover:shadow-xl
-          bg-indigo-500
-          hover:bg-indigo-600
-          focus:ring-1 focus:ring-indigo-900
-          text-white text-lg
-          sm:text-xl
-          duration-300
-        "
-        aria-label="More Projects"
-      >
-        <Button title="More Projects" />
-      </NuxtLink>
+    <h3 class="text-blue1 font-phu-du font-bold leading-10 bg-red-200"> <span class="py-2 px-1">GIẢM "ĐIỂM NHỰA"
+        -
+        TĂNG ĐIỂM XANH</span> </h3>
+    <div class="font-livic text-blue1 w-[80%] text-center text-base leading-1">Mọi vật phẩm bạn cầm tay trong
+      chuyến du lịch của mình đều ảnh hưởng ít nhiều tới môi trường xung quanh. Hãy cùng
+      đo “mức hại” của nhựa dùng một lần cho hành lý của bạn và chuẩn bị cho một chuyến đi gắn kết với thiên nhiên nhé.
     </div>
+
+    <button @click="routeTo('/soando')"
+      class="bg-[url('~/static/img/button/button.png')] w-full bg-center h-12 bg-no-repeat bg-contain mt-10 mb-3 hover:opacity-60 mx-2">
+      <span class="py-2 px1 text-white1 font-phu-du normal-case font-bold tracking-wide">Soạn đồ nào!</span>
+
+    </button>
+    <button @click="routeTo('/camket')"
+      class="bg-[url('~/static/img/button/button_border.png')] w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
+      <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI CAM KẾT "KIÊNG NHỰA"</span>
+    </button>
+    <button @click="routeTo('/valimau')"
+      class="bg-[url('~/static/img/button/button_border.png')] w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
+      <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">VALI Mẫu</span>
+    </button>
+
+    <!-- <youtube class="mt-5" :video-id="videoId" :player-width="375" :player-height="200" @ready="ready" @playing="playing">
+    </youtube> -->
+    <div class="bg-[#7BE2E9] flex flex-col items-center w-full py-5 px-1">
+      <div class="font-phu-du font-bold text-white1 w-[80%] text-center ">
+        <span class="text-base leading-1 px-1 py-2">NHỰA KHÔNG XẤU,</span> <br>
+        <span class="text-base leading-1 px-1 py-2">CHO TỚI KHI CHÚNG TA</span> <br>
+        <span class="text-base leading-1 px-1 py-2">DÙNG NHỰA THIẾU TRÁCH NHIỆM</span>
+      </div>
+      <div class="font-livic text-blue1 text-center font-bold mx-5 mt-3">
+        <div>Nằm trong khuôn khổ dự án “Giảm thiểu Rác thải nhựa đại dương tại Việt Nam” do Bộ Môi trường, Bảo tồn Thiên
+          nhiên và An toàn Hạt nhân CHLB Đức thông qua Tổ chức Quốc tế về Bảo tồn thiên nhiên
+        </div>
+        <div>
+          WWF - Việt Nam tài trợ, trang web “Kiêng Nhựa" giúp bạn định lượng mức độ hại môi trường của từng đồ nhựa sử
+          dụng một lần, để từ đó điều chỉnh hành vi dùng đồ nhựa có trách nhiệm hơn trong mỗi chuyến du lịch của mình.
+        </div>
+        <div class="mt-2">Cùng học cách hành trang du lịch “xanh
+          qua hướng dẫn dưới đây.</div>
+      </div>
+      <button @click="routeTo('/vali-mau')"
+        class="bg-[url('~/static/img/button/button_border_white.png')] w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5 hover:opacity-60">
+        <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">VALI Mẫu</span>
+      </button>
+    </div>
+
   </div>
 </template>
+
+<script>
+// import { getIdFromURL } from "vue-youtube-embed";
+// let videoId = getIdFromURL("https://www.youtube.com/watch?v=24C8r8JupYY");
+
+export default {
+  name: 'Home',
+  data() {
+    // videoId
+  },
+  methods: {
+    routeTo(path) {
+      this.$router.push(path);
+    },
+    toggleInfo(value) {
+      this.openInfo = !!value
+    },
+    toggleMenu(value) {
+      this.openMenu = !!value
+    }
+  }
+}
+</script>
 
 <style scoped></style>
