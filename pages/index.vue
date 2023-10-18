@@ -12,32 +12,32 @@ export default {
     <div class="mt-7 h-14 w-14"><img class="w-full h-auto" alt="home-logo" src="~/static/img/1x/home_logo.png"></div>
     <img class="mx-5 scale-90" src="~/static/img/earth_in_home.png">
 
-    <h3 class="text-blue1 font-phu-du font-bold leading-10 bg-red-200"> <span class="py-2 px-1">GIẢM "ĐIỂM NHỰA"
+    <h3 class="text-blue1 font-phu-du font-bold leading-10 "> <span class="py-2 px-1">GIẢM "ĐIỂM NHỰA"
         -
         TĂNG ĐIỂM XANH</span> </h3>
-    <div class="font-livic text-blue1 w-[80%] text-center text-base leading-1">Mọi vật phẩm bạn cầm tay trong
+    <div class="font-livic text-blue1 w-80 text-center text-base leading-1">Mọi vật phẩm bạn cầm tay trong
       chuyến du lịch của mình đều ảnh hưởng ít nhiều tới môi trường xung quanh. Hãy cùng
       đo “mức hại” của nhựa dùng một lần cho hành lý của bạn và chuẩn bị cho một chuyến đi gắn kết với thiên nhiên nhé.
     </div>
 
     <button @click="routeTo('/soando')"
-      class="bg-[url('~/static/img/button/button.png')] w-full bg-center h-12 bg-no-repeat bg-contain mt-10 mb-3 hover:opacity-60 mx-2">
+      class="bg-button w-full bg-center h-12 bg-no-repeat bg-contain mt-10 mb-3 hover:opacity-60 mx-2">
       <span class="py-2 px1 text-white1 font-phu-du normal-case font-bold tracking-wide">Soạn đồ nào!</span>
 
     </button>
     <button @click="routeTo('/camket')"
-      class="bg-[url('~/static/img/button/button_border.png')] w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
+      class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
       <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI CAM KẾT "KIÊNG NHỰA"</span>
     </button>
     <button @click="routeTo('/valimau')"
-      class="bg-[url('~/static/img/button/button_border.png')] w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
+      class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
       <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">VALI Mẫu</span>
     </button>
-
-    <!-- <youtube class="mt-5" :video-id="videoId" :player-width="375" :player-height="200" @ready="ready" @playing="playing">
-    </youtube> -->
-    <div class="bg-[#7BE2E9] flex flex-col items-center w-full py-5 px-1">
-      <div class="font-phu-du font-bold text-white1 w-[80%] text-center ">
+    <div class="w-full">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rvBz2wLoDOI?si=MZD0jCJs_yeOPNDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="bg-cyan1 flex flex-col items-center w-full py-5 px-1">
+      <div class="font-phu-du font-bold text-white1 w-80 text-center ">
         <span class="text-base leading-1 px-1 py-2">NHỰA KHÔNG XẤU,</span> <br>
         <span class="text-base leading-1 px-1 py-2">CHO TỚI KHI CHÚNG TA</span> <br>
         <span class="text-base leading-1 px-1 py-2">DÙNG NHỰA THIẾU TRÁCH NHIỆM</span>
@@ -53,8 +53,8 @@ export default {
         <div class="mt-2">Cùng học cách hành trang du lịch “xanh
           qua hướng dẫn dưới đây.</div>
       </div>
-      <button @click="routeTo('/vali-mau')"
-        class="bg-[url('~/static/img/button/button_border_white.png')] w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5 hover:opacity-60">
+      <button @click="routeTo('/valimau')"
+        class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5 hover:opacity-60">
         <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">VALI Mẫu</span>
       </button>
     </div>
@@ -68,9 +68,6 @@ export default {
 
 export default {
   name: 'Home',
-  data() {
-    // videoId
-  },
   methods: {
     routeTo(path) {
       this.$router.push(path);
@@ -85,4 +82,35 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.bg-button-border {
+  background-image: url('~/static/img/button/button_border.png');
+}
+.bg-button {
+  background-image: url('~/static/img/button/button.png');
+}
+.bg-button-border-white {
+  background-image: url('~/static/img/button/button_border_white.png');
+}
+.mt-40p {
+  margin-top: 40%;
+}
+.w-45p {
+  width: 45%;
+}
+.w-80p {
+  width: 80%;
+}
+.w-85p {
+  width: 85%;
+}
+.w-90p {
+  width: 90%;
+}
+.w-150px {
+  width: 150px;
+}
+.top-2px {
+  top: 2px;
+}
+</style>

@@ -4,6 +4,33 @@
 */
 
 /* Fonts */
+
+@font-face {
+  font-family: 'LivvicBold';
+  src: url('./fonts/Livvic-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LivvicRegular';
+  src: url('./fonts/Livvic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LivvicSemiBold';
+  src: url('./fonts/Livvic-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'phudu';
+  src: url('./fonts/Phudu.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "GeneralSans-Variable";
   src: url("./fonts/GeneralSans-Variable.woff2") format("woff2"),

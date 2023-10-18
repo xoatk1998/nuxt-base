@@ -7,12 +7,12 @@
         </div>
         <h3 class="font-bold text-lg text-center font-phu-du text-blue1 mt-4 mb-2">Vì một Phú Quốc xanh, <br>Vì một Côn
           Đảo sạch</h3>
-        <h4 class="font-livic text-blue1 w-[90%] text-center text-sm leading-1">Phú Quốc và Côn Đảo là những địa điểm nổi
+        <h4 class="font-livic text-blue1 w-90 text-center text-sm leading-1">Phú Quốc và Côn Đảo là những địa điểm nổi
           tiếng nhờ vào núi non hùng vĩ, ẩm thực địa phương đặc sắc, và vì những
           địa danh lịch sử với bao câu chuyện về anh hùng dân tộc. Tuy nhiên, những năm gần đây, lượng rác thải từ hoạt
           động
           du lịch đã khiến cho môi trường của Phú Quốc và Côn Đảo trở nên ô nhiễm nghiêm trọng.</h4>
-        <h4 class="font-livic text-blue1 w-[90%] text-center text-sm leading-1 my-3">Hãy cùng chung tay “kiêng rác nhựa”
+        <h4 class="font-livic text-blue1 w-90 text-center text-sm leading-1 my-3">Hãy cùng chung tay “kiêng rác nhựa”
           cho hành lý của bạn để trả lại vẻ đẹp tự nhiên cho nơi đây, và giúp cho Trái
           Đất khoẻ mạnh hơn nhé!</h4>
       </div>
