@@ -292,17 +292,17 @@ export default {
       console.log(this.listItemPaginate, '-list item', startIndex, endIndex);
     },
     itemChosen() {
-      const expireAt = this.addMinute(1);
+      const expireAt = this.addMinute(20);
       localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));
     },
     totalPoint(newValue) {
       this.listItem.totalPoint = newValue;
-      let expireAt = this.addMinute(1);
+      let expireAt = this.addMinute(20);
       localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));
     },
     totalPointBefore(newValue) {
       this.listItem.totalPointBefore = newValue;
-      let expireAt = this.addMinute(1);
+      let expireAt = this.addMinute(20);
       localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));    
     },
     screenIsShowing(newValue) {
@@ -441,7 +441,7 @@ export default {
         this.listItem = JSON.parse(itemFromLocalStorage);
       } else {
         this.listItem = JSON.parse(JSON.stringify(itemsData));
-        const expireAt = this.addMinute(1);
+        const expireAt = this.addMinute(20);
         localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));      
       }
       this.totalPoint = this.listItem.totalPoint || 0;
