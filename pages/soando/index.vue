@@ -423,7 +423,7 @@ export default {
     },
     showResult() {
       this.totalPointBefore = this.listItem.items.reduce((accumulator, currentItem) => {
-        if (currentItem.isPicked && currentItem.notUsePlastic) {
+        if (currentItem.isPicked) {
           return accumulator + currentItem.point;
         }
         return accumulator;
