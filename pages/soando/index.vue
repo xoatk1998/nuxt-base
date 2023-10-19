@@ -178,15 +178,8 @@
     </div>
 
     <!-- Screen result of preparation -->
-    <div class="itemDetail flex flex-col items-center justify-between min-h-screen bg-blue1 relative pt-16 z-50"
+    <div class="itemDetail flex flex-col items-center min-h-screen justify-between bg-blue1"
       v-if="this.screenIsShowing === listScreen?.result">
-      <div class="fixed top-7 flex justify-between w-full px-3 z-20">
-        <img @click="backToPreparation()" class="h-4 w-6 cursor-pointer" src="~/static/img/1x/back_to_home_black.png"
-          alt="back_to_home">
-        <img @click="toggleInfo(true)" class="h-6 w-6 cursor-pointer" src="~/static/img/info/info_black.png"
-          alt="back_to_home">
-      </div>
-      <Info v-if="!!openInfo" @closeInfo="toggleInfo(false)" />
       <div class="flex flex-col items-center justify-center">
         <div v-show="this.totalPoint <= 10">
           <img :src="require(`~/static/img/level1.svg`)">
