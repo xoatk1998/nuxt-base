@@ -33,9 +33,8 @@ export default {
       class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
       <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">VALI Mẫu</span>
     </button>
-    <div class="w-full">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/rvBz2wLoDOI?si=MZD0jCJs_yeOPNDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+      <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/rvBz2wLoDOI?si=MZD0jCJs_yeOPNDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
     <div class="bg-cyan1 flex flex-col items-center w-full py-5 px-1">
       <div class="font-phu-du font-bold text-white1 w-80 text-center ">
         <span class="text-base leading-1 px-1 py-2">NHỰA KHÔNG XẤU,</span> <br>
