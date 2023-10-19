@@ -5,21 +5,21 @@
         <div class="flex justify-center mx-10 mt-12">
           <img src="~/static/img/luyen_cach_kieng_nhua.png" title="hoc cach kieng nhua">
         </div>
-        <h3 class="font-bold text-lg text-center font-phu-du text-blue1 mt-4 mb-2">Vì một Phú Quốc xanh, <br>Vì một Côn
+        <h3 class="font-black text-2xl text-center font-phu-du text-blue1 mt-4 mb-2">Vì một Phú Quốc xanh, <br>Vì một Côn
           Đảo sạch</h3>
-        <h4 class="font-livic text-blue1 w-90 text-center text-sm leading-1">Phú Quốc và Côn Đảo là những địa điểm nổi
+        <h4 class="font-livic text-blue1 w-90p text-center text-sm leading-1 font-bold">Phú Quốc và Côn Đảo là những địa điểm nổi
           tiếng nhờ vào núi non hùng vĩ, ẩm thực địa phương đặc sắc, và vì những
           địa danh lịch sử với bao câu chuyện về anh hùng dân tộc. Tuy nhiên, những năm gần đây, lượng rác thải từ hoạt
           động
           du lịch đã khiến cho môi trường của Phú Quốc và Côn Đảo trở nên ô nhiễm nghiêm trọng.</h4>
-        <h4 class="font-livic text-blue1 w-90 text-center text-sm leading-1 my-3">Hãy cùng chung tay “kiêng rác nhựa”
+        <h4 class="font-livic text-blue1 w-90p text-center text-sm leading-1 my-3 font-bold">Hãy cùng chung tay “kiêng rác nhựa”
           cho hành lý của bạn để trả lại vẻ đẹp tự nhiên cho nơi đây, và giúp cho Trái
           Đất khoẻ mạnh hơn nhé!</h4>
       </div>
       <div>
         <img class="honDao" src="~/static/img/hon_dao.png">
 
-        <div class="w-full flex flex-col items-center justify-center gap-2 mb-3">
+        <div class="w-full flex flex-col items-center justify-center gap-2 mb-5 mt-1">
           <button @click="travelTo('PHU_QUOC')"
             class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain">
             <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Du lịch Phú Quốc <br> "Kiêng
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="min-h-screen flex flex-col items-center" v-else>
-      <h2 class="font-black text-2xl text-center font-phu-du text-blue1 mt-12 mb-3">Một chiếc hành lý đến {{ this.place
+      <h2 class="font-black text-2xl text-center font-phu-du text-blue1 mt-14 mb-3 mx-3">Một chiếc hành lý đến {{ this.place
         === places.CON_DAO ? 'Côn Đảo' : 'Phú Quốc' }}
         “khoẻ mạnh” vì kiêng rác nhựa </h2>
       <div class="min-w bg-vali" v-if="this.place === places.CON_DAO">
@@ -88,11 +88,11 @@
         </div>
       </div>
       <div class="itemDetail mt-5" v-if="item?.name">
-        <h3 class="uppercase text-xl text-center text-blue1 font-bold font-phu-du">{{ item.name }}</h3>
-        <h5 class="text-lg text-center text-blue1 font-livic">{{ item.description }}</h5>
-        <h2 class="uppercase text-2xl font-bold text-center mt-5 mb-2 text-blue1 font-phu-du">Mức ảnh hưởng môi trường
+        <h3 class="uppercase text-xl text-center text-blue1 font-black font-phu-du">{{ item.name }}</h3>
+        <h5 class="text-lg text-center text-blue1 font-livic mx-4">{{ item.description }}</h5>
+        <h2 class="uppercase text-2xl font-bold text-center mt-5 mb-2 text-blue1 font-phu-du">Điểm hại môi trường
         </h2>
-        <h2 class="uppercase text-4xl text-center text-cyan1">{{ item.point }}</h2>
+        <h2 class="uppercase text-4xl text-center text-cyan1 font-phu-du text-bold">{{ item.point }}</h2>
       </div>
     </div>
   </div>

@@ -3,60 +3,65 @@
     <!-- Screen Prepare Vali -->
     <div class="pickItem flex flex-col justify-between" v-if="this.screenIsShowing === listScreen?.listItems">
       <div class="flex flex-col justify-between items-center">
-        <h3 class="font-bold text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
+        <h3 class="font-black text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
         <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ formatNumber(this.totalPoint) }}</h3>
         <img class="" src="~/static/img/good_point_preparation.png">
-        <p class="text-center text-blue1 mx-5 my-2">Bạn đang mang theo những sản phẩm nhựa dùng một lần nào dưới đây?</p>
+        <p class="font-livic text-center text-blue1 mx-5 my-2">Bạn đang mang theo những sản phẩm nhựa dùng một lần nào
+          dưới đây?</p>
         <swiper :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
           :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange"
           v-if="this.listItemPaginate?.length">
           <swiper-slide v-for="n in   3  " :key="n" class="test" :class="{ w_100: true }">
             <!-- list item in a page -->
             <div class="grid grid-cols-2 gap-4 my-3">
-              <div v-if="listItemPaginate[0]" class="card-border bg-no-repeat bg-contain flex justify-center relative w-150"
+              <div v-if="listItemPaginate[0]"
+                class="card-border bg-no-repeat bg-contain flex justify-center items-center relative w-full h-auto p-5"
                 :class="{
                   'card-border-selected':
                     !!listItemPaginate[0].isPicked
                 }">
                 <img v-if="!listItemPaginate[0].notUsePlastic" @click="fetchItemDetail(listItemPaginate[0].id, 0)"
-                  class="w-30 h-40 scale-75" :src="require(`~/static/img/${listItemPaginate[0].image}`)">
-                <img v-else class="w-30 h-40 scale-75"
+                  class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[0].image}`)">
+                <img v-else class="w-auto h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[0].imageOfItemReplace}`)">
                 <div @click="unpickItem(0)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
               </div>
-              <div v-if="listItemPaginate[1]" class="card-border bg-no-repeat bg-contain flex justify-center relative w-150"
+              <div v-if="listItemPaginate[1]"
+                class="card-border bg-no-repeat bg-contain flex justify-center items-center relative w-full h-auto p-5"
                 :class="{
                   'card-border-selected':
                     !!listItemPaginate[1].isPicked
                 }">
                 <img v-if="!listItemPaginate[1].notUsePlastic" @click="fetchItemDetail(listItemPaginate[1].id, 1)"
-                  class="w-30 h-40 scale-75" :src="require(`~/static/img/${listItemPaginate[1].image}`)">
-                <img v-else class="w-30 h-40 scale-75"
+                  class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[1].image}`)">
+                <img v-else class="w-auto h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[1].imageOfItemReplace}`)">
                 <div @click="unpickItem(1)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
               </div>
-              <div v-if="listItemPaginate[2]" class="card-border bg-no-repeat bg-contain flex justify-center relative w-150"
+              <div v-if="listItemPaginate[2]"
+                class="card-border bg-no-repeat bg-contain flex justify-center items-center relative w-full h-auto p-5"
                 :class="{
                   'card-border-selected':
                     !!listItemPaginate[2].isPicked
                 }">
                 <img v-if="!listItemPaginate[2].notUsePlastic" @click="fetchItemDetail(listItemPaginate[2].id, 2)"
-                  class="w-30 h-40 scale-75" :src="require(`~/static/img/${listItemPaginate[2].image}`)">
-                <img v-else class="w-30 h-40 scale-75"
+                  class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[2].image}`)">
+                <img v-else class="w-auto h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[2].imageOfItemReplace}`)">
                 <div @click="unpickItem(2)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
               </div>
-              <div v-if="listItemPaginate[3]" class="card-border bg-no-repeat bg-contain flex justify-center relative w-150"
+              <div v-if="listItemPaginate[3]"
+                class="card-border bg-no-repeat bg-contain flex justify-center items-center relative w-full h-auto p-5"
                 :class="{
                   'card-border-selected':
                     !!listItemPaginate[3].isPicked
                 }">
                 <img v-if="!listItemPaginate[3].notUsePlastic" @click="fetchItemDetail(listItemPaginate[3].id, 3)"
-                  class="w-30 h-40 scale-75" :src="require(`~/static/img/${listItemPaginate[3].image}`)">
-                <img v-else class="w-30 h-40 scale-75"
+                  class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[3].image}`)">
+                <img v-else class="w-auto h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[3].imageOfItemReplace}`)">
                 <div @click="unpickItem(3)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
@@ -66,8 +71,7 @@
         </swiper>
       </div>
       <div class="mb-8 w-full flex justify-center">
-        <button @click="completePrepare()"
-          class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain">
+        <button @click="completePrepare()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">ĐÃ SOẠN XONG</span>
         </button>
       </div>
@@ -97,8 +101,7 @@
           class="bg-button-fill-white w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5">
           <span class="text-black tracking-wide font-phu-du normal-case font-bold">THAY LỰA CHỌN "XANH" HƠN</span>
         </button>
-        <button @click="usePlastic()"
-          class="bg-button-border-white w-full h-12 bg-center bg-no-repeat bg-contain">
+        <button @click="usePlastic()" class="bg-button-border-white w-full h-12 bg-center bg-no-repeat bg-contain">
           <span class="text-white1 tracking-wide font-phu-du normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
         </button>
       </div>
@@ -115,12 +118,10 @@
         <h5 class="text-blue1 font-livic mt-3 text-center w-90">{{ this.itemChosen.descriptionOfItemReplace }}</h5>
       </div>
       <div class="mb-5 w-full flex items-center flex-col">
-        <button @click="chooseItemReplace()"
-          class="bg-button bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
+        <button @click="chooseItemReplace()" class="bg-button bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
           <span class="text-white1 tracking-wide font-phu-du normal-case font-bold">DÙNG LỰA CHỌN NÀY</span>
         </button>
-        <button @click="usePlastic()"
-          class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
+        <button @click="usePlastic()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
         </button>
       </div>
@@ -131,48 +132,46 @@
       v-if="this.screenIsShowing === listScreen?.itemsPicked">
       <div class="flex flex-col items-center">
         <h3 class="font-bold text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
-      <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ (this.totalPoint.toFixed(2)) }}</h3>
-      <div class="flex flex-row justify-between w-90 mt-5">
-        <h3 class="uppercase font-bold text-lg text-center font-phu-du text-blue1">Sản phẩm đã chọn</h3>
-        <h3 class="uppercase font-bold text-lg text-center font-phu-du text-blue1">Mức hại</h3>
-      </div>
-      <div class="w-90 flex justify-center my-3">
-        <img src="~/static/img/hr_blue.png" alt="hr">
-      </div>
-      <table class="table-auto w-90">
-        <tbody>
-          <tr class=" h-10" v-for="(  item, index  ) in   listItemChosen  " :key="index">
-            <td>
-              <div class="relative w-8 h-8 bg-checkbox bg-no-repeat bg-contain">
-                <img class="zoom-out absolute" :src="require(`~/static/img/${item.imageOfItemReplace}`)"
-                  v-if="item.notUsePlastic">
-                <img class="zoom-out absolute" :src="require(`~/static/img/${item.image}`)" v-else>
-              </div>
-            </td>
+        <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ (this.totalPoint.toFixed(2)) }}</h3>
+        <div class="flex flex-row justify-between w-90 mt-5">
+          <h3 class="uppercase font-bold text-lg text-center font-phu-du text-blue1">Sản phẩm đã chọn</h3>
+          <h3 class="uppercase font-bold text-lg text-center font-phu-du text-blue1">Mức hại</h3>
+        </div>
+        <div class="w-90 flex justify-center my-3">
+          <img src="~/static/img/hr_blue.png" alt="hr">
+        </div>
+        <table class="table-auto w-90">
+          <tbody>
+            <tr class=" h-10" v-for="(  item, index  ) in   listItemChosen  " :key="index">
+              <td>
+                <div class="relative w-8 h-8 bg-checkbox bg-no-repeat bg-contain">
+                  <img class="zoom-out absolute" :src="require(`~/static/img/${item.imageOfItemReplace}`)"
+                    v-if="item.notUsePlastic">
+                  <img class="zoom-out absolute" :src="require(`~/static/img/${item.image}`)" v-else>
+                </div>
+              </td>
 
-            <td class="pl-2 font-livic text-blue1" v-if="item.notUsePlastic">{{ item.nameOfItemReplace }}</td>
-            <td class="pl-2 font-livic text-blue1" v-else>{{ item.name }}</td>
-            <td class="font-livic text-blue1" v-if="item.notUsePlastic">{{ item.pointOfItemReplace }}</td>
-            <td class="font-livic text-blue1" v-else>{{ item.point }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="w-90 flex justify-center my-3">
-        <img src="~/static/img/hr_blue.png" alt="hr">
-      </div>
-      <h5 class="font-livic text-blue1 text-center mx-8">Bạn đang mang theo <strong>{{ this.itemChosen.nameOfItemReplace
-        || 0
-      }} sản phẩm</strong> nhựa
-        dùng một lần. Bạn chắc chắn với lựa chọn trên?</h5>
+              <td class="pl-2 font-livic text-blue1" v-if="item.notUsePlastic">{{ item.nameOfItemReplace }}</td>
+              <td class="pl-2 font-livic text-blue1" v-else>{{ item.name }}</td>
+              <td class="font-livic text-blue1" v-if="item.notUsePlastic">{{ item.pointOfItemReplace }}</td>
+              <td class="font-livic text-blue1" v-else>{{ item.point }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="w-90 flex justify-center my-3">
+          <img src="~/static/img/hr_blue.png" alt="hr">
+        </div>
+        <h5 class="font-livic text-blue1 text-center mx-8">Bạn đang mang theo <strong>{{ this.itemChosen.nameOfItemReplace
+          || 0
+        }} sản phẩm</strong> nhựa
+          dùng một lần. Bạn chắc chắn với lựa chọn trên?</h5>
       </div>
       <div class="mb-5 w-full flex items-center flex-col">
-        <button @click="backToPreparation()"
-          class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
+        <button @click="backToPreparation()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">ĐỂ TÔI CÂN NHẮC THÊM!</span>
         </button>
 
-        <button @click="showResult()"
-          class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
+        <button @click="showResult()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI CHẮC CHẮN VỚI LỰA CHỌN NÀY</span>
         </button>
       </div>
@@ -190,53 +189,58 @@
       <Info v-if="!!openInfo" @closeInfo="toggleInfo(false)" />
       <div class="flex flex-col items-center justify-center">
         <div v-show="this.totalPoint <= 10">
-        <img :src="require(`~/static/img/level1.svg`)">
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Bạn đã "kiêng nhựa" thành công với điểm
-          hại môi trường là</h4>
-        <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
-        </h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
-          trường của bạn là</h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore) }}
-        </h4>
-      </div>
-      <div v-show="this.totalPoint > 10 && this.totalPoint <= 20">
-        <div class="w-85 h-auto"><img class="w-full" :src="require(`~/static/img/level2.svg`)"></div>
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Thêm chút nỗ lực, bạn sẽ "kiêng nhựa" tốt
-          hơn cả điểm bên dưới</h4>
-        <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
-        </h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
-          trường của bạn là</h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore) }}
-        </h4>
-      </div>
-      <div v-show="this.totalPoint > 20 && this.totalPoint <= 30">
-        <img :src="require(`~/static/img/level3.svg`)">
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Còn rất nhiều sản phẩm thay thế cho hành
-          lý của bạn "xanh" hơn</h4>
-        <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
-        </h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
-          trường của bạn là</h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore) }}
-        </h4>
-      </div>
-      <div v-show="this.totalPoint > 30 && this.totalPoint <= 40">
-        <img :src="require(`~/static/img/level4.svg`)">
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Hãy "kiêng nhựa" ngay và luôn để giảm điểm
-          hại môi trường dưới đây</h4>
-        <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
-        </h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
-          trường của bạn là</h4>
-        <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore) }}
-        </h4>
-      </div>
+          <img :src="require(`~/static/img/level1.svg`)">
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Bạn đã "kiêng nhựa" thành công với điểm
+            hại môi trường là</h4>
+          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
+          </h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
+            trường của bạn là</h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
+          }}
+          </h4>
+        </div>
+        <div v-show="this.totalPoint > 10 && this.totalPoint <= 20">
+          <div class="w-85 h-auto"><img class="w-full" :src="require(`~/static/img/level2.svg`)"></div>
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Thêm chút nỗ lực, bạn sẽ "kiêng nhựa"
+            tốt
+            hơn cả điểm bên dưới</h4>
+          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
+          </h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
+            trường của bạn là</h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
+          }}
+          </h4>
+        </div>
+        <div v-show="this.totalPoint > 20 && this.totalPoint <= 30">
+          <img :src="require(`~/static/img/level3.svg`)">
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Còn rất nhiều sản phẩm thay thế cho hành
+            lý của bạn "xanh" hơn</h4>
+          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
+          </h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
+            trường của bạn là</h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
+          }}
+          </h4>
+        </div>
+        <div v-show="this.totalPoint > 30">
+          <img :src="require(`~/static/img/level4.svg`)">
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Hãy "kiêng nhựa" ngay và luôn để giảm
+            điểm
+            hại môi trường dưới đây</h4>
+          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
+          </h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
+            trường của bạn là</h4>
+          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
+          }}
+          </h4>
+        </div>
       </div>
       <div class="mb-5 w-full flex items-center flex-col">
-        <button @click="shareFB()"
-          class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
+        <button @click="shareFB()" class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
         </button>
       </div>
@@ -293,17 +297,17 @@ export default {
     },
     itemChosen() {
       const expireAt = this.addMinute(20);
-      localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));
+      localStorage.setItem('items', JSON.stringify({ ...this.listItem, expireAt }));
     },
     totalPoint(newValue) {
       this.listItem.totalPoint = newValue;
       let expireAt = this.addMinute(20);
-      localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));
+      localStorage.setItem('items', JSON.stringify({ ...this.listItem, expireAt }));
     },
     totalPointBefore(newValue) {
       this.listItem.totalPointBefore = newValue;
       let expireAt = this.addMinute(20);
-      localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));    
+      localStorage.setItem('items', JSON.stringify({ ...this.listItem, expireAt }));
     },
     screenIsShowing(newValue) {
       let currentItem = localStorage.getItem('items');
@@ -436,13 +440,13 @@ export default {
     },
     loadData() {
       const itemFromLocalStorage = localStorage.getItem('items');
-      
+
       if (itemFromLocalStorage && itemFromLocalStorage.expireAt < new Date().valueOf()) {
         this.listItem = JSON.parse(itemFromLocalStorage);
       } else {
         this.listItem = JSON.parse(JSON.stringify(itemsData));
         const expireAt = this.addMinute(20);
-        localStorage.setItem('items', JSON.stringify({...this.listItem, expireAt}));      
+        localStorage.setItem('items', JSON.stringify({ ...this.listItem, expireAt }));
       }
       this.totalPoint = this.listItem.totalPoint || 0;
       this.totalPointBefore = this.listItem.totalPointBefore || 0;
@@ -465,6 +469,10 @@ export default {
 </script>
 
 <style scoped>
+.w-90 {
+  width: 90%;
+}
+
 .card-border {
   background-image: url('~/static/img/card_border.png');
 }
@@ -516,20 +524,27 @@ export default {
 .w_100 {
   width: 100% !important;
 }
+
+.max100 {
+  max-width: 100px !important;
+}
+
 .bg-button-border {
   background-image: url('~/static/img/button/button_border.png');
 }
+
 .bg-button {
   background-image: url('~/static/img/button/button.png');
 }
+
 .bg-button-border-white {
   background-image: url('~/static/img/button/button_border_white.png');
 }
+
 .bg-button-fill-white {
   background-image: url('~/static/img/button/button_fill_white.png');
 }
 
 .bg-checkbox {
   background-image: url('~/static/img/1x/checkbox.png');
-}
-</style>
+}</style>

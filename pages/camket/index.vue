@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="h-screen overflow-auto">
     <div v-if="!isShowCertificte" class="flex flex-col items-center min-h-screen bg-white1">
       <div class="flex flex-col justify-center mt-16 mb-5">
         <img class="mx-3" title="toi cam ket kieng nhua" alt="toi_cam_ket_kieng_nhua"
           src="~/static/img/toi_cam_ket_title.png">
       </div>
       <label for="file-upload">
-        <div class="h-16 w-16 rounded-full bg-white flex items-center justify-center bg-black relative">
-          <img class="object-cover rounded-full boder-solid" :src="previewImage" :class="{ bgGray950: !previewImage }" />
+        <div class="h-16 w-16 rounded-full flex items-center justify-center bg-black relative">
+          <img class="object-cover rounded-full boder-solid h-16 w-16" :src="previewImage" :class="{ hidden: !previewImage }" />
           <img class="absolute bottom-0 right-0 h-4 w-4" src="~/static/img/button/plus.png" alt="choose">
         </div>
       </label>
@@ -16,7 +16,7 @@
         <input id="file-upload" type="file" @change="handleFileUpload">
       </label>
       <input type="text" :value="userName"
-        class="mt-5 border-none bg-white1 text-center font-phudu placeholder:text-cyan1 font-bold placeholder:font-bold text-3xl placeholder:text-3xl focus:border-none focus:outline-none"
+        class="mt-5 border-none bg-white1 text-center font-phudu text-cyan1 font-bold text-3xl customInput"
         placeholder="TÊN NGƯỜI DÙNG" @input="updateInputText" />
       <div class="w-90 flex justify-center mb-3">
         <img src="~/static/img/hr_blue.png" alt="hr">
@@ -29,7 +29,7 @@
         dùng một lần ở khu du lịch và không sử dụng
         đồ dùng một lần trong khách sạn.
       </div>
-      <div class="bottom-8 absolute w-full flex justify-center">
+      <div class="w-full flex justify-center mt-5">
         <button @click="showCertificate()"
           class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Từ nay tôi kiêng nhựa</span>
@@ -38,15 +38,15 @@
     </div>
     <div v-else class="flex flex-col items-center bg-blue1 min-h-screen justify-between">
       <div class="flex flex-col items-center">
-        <div class="w-45 mt-20 mb-5 flex justify-center">
+        <div class=" mt-20 mb-5 flex justify-center" style="width: 65%;">
         <img src="~/static/img/tu_nay_goi_toi.png">
       </div>
-      <div class="h-16 w-16 rounded-full bg-white flex items-center justify-center bg-black relative">
-        <img class="object-cover rounded-full boder-solid" :src="previewImage" :class="{ bgGray950: !previewImage }" />
+      <div class="h-16 w-16 rounded-full flex items-center justify-center bg-black relative">
+        <img class="object-cover rounded-full boder-solid" :src="previewImage" :class="{ hidden: !previewImage }" />
       </div>
       <h3 class="font-phu-du text-3xl text-cyan1 my-3 font-bold">{{ userName || 'Tên người dùng' }}</h3>
       <h4 class="font-phu-du text-2xl text-white1 font-bold mt-2">CAM KẾT MỘT VALI “Kiêng Nhựa"</h4>
-      <div class="font-livic text-white1 w-90 text-center text-base leading-1">Vì một trái đất “xanh" và một cơ thể lành
+      <div class="font-livic text-white1 text-center text-base leading-1" style="width: 85%;">Vì một trái đất “xanh" và một cơ thể lành
         mạnh,
         tôi cam kết trong chuyến đi này sẽ mang theo
         những vật dụng tái sử dụng, không mua đồ nhựa
@@ -57,7 +57,7 @@
         <img src="~/static/img/huan_chuong.png">
       </div>
       </div>
-      <div class="w-full flex justify-center">
+      <div class="w-full flex justify-center my-5">
         <button @click="shareFB()"
           class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain">
           <span class="text-cyan1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ cam kết</span>
@@ -122,9 +122,6 @@ input[type="file"] {
   display: none;
 }
 
-.bgGray950 {
-  background: rgb(3 7 18 / 1)
-}
 .bg-button-border {
   background-image: url('~/static/img/button/button_border.png');
 }
@@ -133,5 +130,14 @@ input[type="file"] {
 }
 .bg-button-border-white {
   background-image: url('~/static/img/button/button_border_white.png');
+}
+.customInput::placeholder{
+  color: #7BE2E9;
+  font-size: 30px;
+  line-height: 36px;
+}
+.customInput:focus, .customInput:focus-visible{
+  outline: none;
+  box-shadow: none;
 }
 </style>

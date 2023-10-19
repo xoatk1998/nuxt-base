@@ -1,6 +1,6 @@
 <template>
   <main class="max-w-full mx-auto bg-black-200 min-h-screen flex flex-col relative">
-    <div class="fixed top-7 flex justify-between w-full z-20 px-5">
+    <div class="fixed top-7 flex justify-between w-full z-20 px-5 max-w-screen">
       <img @click="toggleMenu(true)" class="h-4 w-6 cursor-pointer" src="~/static/img/1x/back_to_home.png"
         alt="back_to_home">
       <img @click="toggleInfo(true)" class="h-6 w-6 cursor-pointer" src="~/static/img/info/info.png"
@@ -12,26 +12,6 @@
       <Nuxt />
     </transition>
   </main>
-  <!-- <div
-    class="bg-secondary-light dark:bg-primary-dark min-h-screen flex flex-col"
-  >
-    <div
-      class="
-        flex
-        space-x-2
-        mr-8
-        mb-6
-        right-0
-        bottom-0
-        z-50
-        fixed
-        items-center
-        sm:space-x-4
-      "
-    >
-      <BackToTop />
-    </div>
-  </div> -->
 </template>
 
 <script>
@@ -71,6 +51,9 @@ export default {
   line-height: 22px;
 }
 
+.max-w-screen{
+  max-width: 100vw;
+}
 .fade-enter-active {
   animation: coming 0.4s;
   animation-delay: 0.2s;

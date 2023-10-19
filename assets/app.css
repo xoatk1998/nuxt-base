@@ -2,7 +2,6 @@
  * Nuxt.js & TailwindCSS Portfolio Main CSS File
  * Powered by: @realstoman
 */
-
 /* Fonts */
 
 @font-face {
@@ -225,4 +224,25 @@
 
 .font-general-bold-italic {
   font-family: "GeneralSans-BoldItalic";
+}
+
+.bg-button-border {
+  background-image: url('~/static/img/button/button_border.png');
+}
+
+.bg-button {
+  background-image: url('~/static/img/button/button.png');
+}
+
+.bg-button-border-white {
+  background-image: url('~/static/img/button/button_border_white.png');
+}
+
+.info-swiper-custom .swiper-button-prev::after, .info-swiper-custom .swiper-button-next::after{
+  font-size: 20px !important;
+  color: white;
+}
+
+.w-90p {
+  width: 90%;
 }

@@ -19,10 +19,10 @@ module.exports = {
         "primary-dark": "#0D2438",
         "secondary-dark": "#102D44",
         "ternary-dark": "#1E3851",
-        'blue1': '#2346D7',
-        'pink1': '#ffc0cb',
-        'white1': '#FDFAF3',
-        'cyan1': '#7BE2E9'
+        blue1: "#2346D7",
+        pink1: "#ffc0cb",
+        white1: "#FDFAF3",
+        cyan1: "#7BE2E9",
       },
       container: {
         padding: {
@@ -40,5 +40,7 @@ module.exports = {
       opacity: ["disabled"],
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/forms"),
+  ],
 };
