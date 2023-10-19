@@ -15,7 +15,8 @@
     "nuxt": "^2.15.7",
     "swiper": "^6.8.4",
     "swiper-vue2": "^1.0.10",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "vue-social-sharing": "^3.0.9"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.1.1",

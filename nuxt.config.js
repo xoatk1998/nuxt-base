@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Stoman Portfolio",
+    title: "Kieng Nhua",
     htmlAttrs: {
       lang: "en",
     },
@@ -39,7 +39,9 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    'vue-social-sharing/nuxt'
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

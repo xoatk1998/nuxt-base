@@ -233,9 +233,14 @@
         </div>
       </div>
       <div class="mb-5 w-full flex items-center flex-col">
-        <button @click="shareFB()" class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
+        <!-- <button @click="shareFB()" class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
-        </button>
+        </button> -->
+        <ShareNetwork network="facebook" :url="getSharingUrl()" hashtags="kiengnhua">
+          <button class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
+            <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
+          </button>
+        </ShareNetwork>
       </div>
     </div>
 
@@ -263,12 +268,12 @@ const listScreen = {
 }
 export default {
   head: {
-    title: 'Cam ket',
+    title: 'Soan do',
     meta: [
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Custom description'
+        content: 'Soan do nao'
       }
     ],
   },
@@ -335,6 +340,9 @@ export default {
     this.loadData();
   },
   methods: {
+    getSharingUrl() {
+      return `https://kiengnhua.vn/result/${this.totalPoint}/${this.totalPointBefore}`;
+    },
     getImageUrl(imageId) {
       return `https://picsum.photos/600/400/?image=${imageId}`;
     },
@@ -402,25 +410,16 @@ export default {
     backToPreparation() {
       this.screenIsShowing = listScreen.listItems;
     },
-    shareFB() {
-      // eslint-disable-next-line no-undef
-      FB.ui({
-        method: 'share_open_graph',
-        href: 'https://zing.vn/',
-        action_type: 'og.shares',
-        action_properties: JSON.stringify({
-          object: {
-            'og:url': window.location.href,
-            'og:title': 'My Title',
-            'og:description': 'Some description here',
-            'og:image': 'img url'
-          }
-        })
-        // method: 'share',
-        // quote: 'Check out this awesome post!',
-        // href: 'https://zing.vn/',
-      }, function () { });
-    },
+    // shareFB() {
+    //   if (this.$fb) {
+    //     this.$fb.ui({
+    //       method: 'share',
+    //       href: 'https://zing.vn' // Replace with the URL you want to share
+    //     }, function(response){});
+    //   } else {
+    //     console.error('Facebook SDK not initialized');
+    //   }
+    // },
     showResult() {
       this.totalPointBefore = this.listItem.items.reduce((accumulator, currentItem) => {
         if (currentItem.isPicked) {
@@ -540,4 +539,9 @@ export default {
 
 .bg-checkbox {
   background-image: url('~/static/img/1x/checkbox.png');
-}</style>
+}
+
+a.share-network-facebook {
+  width: 100%;
+}
+</style>
