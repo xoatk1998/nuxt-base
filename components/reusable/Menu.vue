@@ -3,7 +3,7 @@
         <div class="flex w-full justify-center cursor-pointer mt-7">
             <img class="mx-5 w-6 h-6" @click="$emit('closeMenu')" src="~/static/img/info/close_btn.png" alt="close_btn">
         </div>
-        <div class="container flex flex-col items-center px-4 mt-40">
+        <div class="container mx-auto flex flex-col items-center px-4 mt-40">
             <a class="py-2 px1 text-white1 font-phu-du normal-case font-bold tracking-wide focus:text-blue1 focus:underline" href="/soando">SOẠN ĐỒ NÀO!</a>
             <a class="py-2 px1 text-white1 font-phu-du normal-case font-bold tracking-wide focus:text-blue1 focus:underline" href="/camket">TÔI CAM KẾT KIÊNG NHỰA</a>
             <a class="py-2 px1 text-white1 font-phu-du normal-case font-bold tracking-wide focus:text-blue1 focus:underline" href="/valimau">VALI MẪU</a>
@@ -11,10 +11,9 @@
         </div>
     </div>
 </template>
-  
+
 <script>
 export default {
     name: 'Menu'
 }
 </script>
-  

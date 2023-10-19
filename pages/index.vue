@@ -33,12 +33,10 @@ export default {
       class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-5 hover:opacity-60">
       <span class="text-blue1 tracking-wide font-phu-du normal-case font-black">VALI Mẫu</span>
     </button>
-    <div class="w-full mx-auto">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rvBz2wLoDOI?si=MZD0jCJs_yeOPNDo"
+      <iframe class="mx-auto" width="375px" height="210px" src="https://www.youtube.com/embed/rvBz2wLoDOI?si=MZD0jCJs_yeOPNDo"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
-    </div>
 
     <div class="bg-cyan1 flex flex-col items-center w-full py-5 px-1">
       <div class="font-phu-du font-bold text-white1 w-80 text-center ">
