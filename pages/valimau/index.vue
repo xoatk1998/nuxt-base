@@ -37,7 +37,7 @@
       <h2 class="font-black text-2xl text-center font-phu-du text-blue1 mt-14 mb-3 mx-3">Một chiếc hành lý đến {{ this.place
         === places.CON_DAO ? 'Côn Đảo' : 'Phú Quốc' }}
         “khoẻ mạnh” vì kiêng rác nhựa </h2>
-      <div class="min-w bg-vali" v-if="this.place === places.CON_DAO">
+      <div class="min-w-screen bg-vali" v-if="this.place === places.CON_DAO">
         <div class="grid grid-cols-2 gap-4">
           <div class="totePosition">
             <img class="toteImg" src="~/static/img/vali_pq/pq_5.png" @click="showItemDetail(5, 'CON_DAO')">
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-      <div class="min-w bg-vali" v-else>
+      <div class="min-w-screen bg-vali" v-else>
         <div class="grid grid-cols-2 gap-4">
           <div class="totePosition">
             <img class="toteImg" src="~/static/img/vali_pq/pq_5.png" @click="showItemDetail(5, 'PHU_QUOC')">
@@ -88,11 +88,11 @@
         </div>
       </div>
       <div class="itemDetail mt-5" v-if="item?.name">
-        <h3 class="uppercase text-xl text-center text-blue1 font-black font-phu-du">{{ item.name }}</h3>
-        <h5 class="text-lg text-center text-blue1 font-livic mx-4">{{ item.description }}</h5>
-        <h2 class="uppercase text-2xl font-bold text-center mt-5 mb-2 text-blue1 font-phu-du">Điểm hại môi trường
+        <h3 class="uppercase text-lg text-center text-blue1 font-black font-phu-du">{{ item.name }}</h3>
+        <h5 class="text-sm text-center text-blue1 font-livic mx-4">{{ item.description }}</h5>
+        <h2 class="uppercase text-2xl font-bold text-center mt-3 mb-2 text-blue1 font-phu-du">Điểm hại môi trường
         </h2>
-        <h2 class="uppercase text-4xl text-center text-cyan1 font-phu-du text-bold">{{ item.point }}</h2>
+        <h2 class="uppercase text-4xl text-center text-cyan1 font-phu-du font-black">{{ item.point }}</h2>
       </div>
     </div>
   </div>
@@ -149,7 +149,7 @@ export default {
 }
 
 .topRightPosition {
-  height: 36vh;
+  height: 30vh;
   position: relative;
 }
 
@@ -206,11 +206,15 @@ img.item1, .itemConDao1 {
   margin-top: -11%;
   margin-left: 11%;
 }
+.bottomRightPosition{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 img.item3 {
-  transform: scale(0.4);
-  margin-left: -7%;
-  margin-top: 22%;
+  width: 50px;
 }
 
 img.item2 {
