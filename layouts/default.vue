@@ -16,8 +16,6 @@
 
 <script>
 import feather from "feather-icons";
-import AppHeader from "../components/shared/AppHeader.vue";
-import AppFooter from "../components/shared/AppFooter.vue";
 import BackToTop from "../components/BackToTop.vue";
 import Info from '../components/reusable/Info.vue'
 import Menu from '../components/reusable/Menu.vue'
@@ -39,7 +37,7 @@ export default {
       this.openMenu = !!value
     }
   },
-  components: { AppFooter, BackToTop, AppHeader,  Info, Menu, },
+  components: { BackToTop,  Info, Menu },
 };
 </script>
 
