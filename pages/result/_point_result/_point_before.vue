@@ -16,8 +16,8 @@ export default {
   // },
   async asyncData({ params }) {
     console.log(params, '-----params')
-    const pointResult = formatNumber(params.point_result);
-    const pointBefore = formatNumber(params.point_before);
+    const pointResult = +(params.point_result).toFixed(2);
+    const pointBefore = +(params.point_before).toFixed(2);
     return {pointBefore, pointResult};
   },
   head() {
