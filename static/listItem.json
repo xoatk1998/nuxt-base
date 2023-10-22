@@ -8,10 +8,21 @@
       "name": "Chai nhựa",
       "image": "newIcon/chai_nhua.png",
       "description": "Để sản xuất ra chai nhựa dung tích 1 lít, ta phải dùng đến 3 lít nước. Dù ở nhiệt độ bình thường, khi đã chứa nước quá 10 tuần, chai nhựa sẽ thải ra độc chất DEHA và dioxin gây ung thư. Với tuổi thọ lên đến 450 năm và hơn 20.000 chiếc được tiêu thụ mỗi giây, mặc dù được làm từ nhựa PET có khả năng tái chế cao, số lượng chai nhựa khủng khiếp đã lấn át hầu như toàn bộ nỗ lực phân loại và tái chế trên thế giới.",
-      "pointOfItemReplace": 2.2,
-      "nameOfItemReplace": "Bình giữ nhiệt bằng kim loại",
-      "imageOfItemReplace": "newIcon/binh_giu_nhiet.png",
-      "descriptionOfItemReplace": "Tới cuối ngày nước vẫn ấm/mát như ban đầu, thích thú quá chừng!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 2.2,
+          "nameOfItemReplace": "Bình giữ nhiệt bằng kim loại",
+          "imageOfItemReplace": "newIcon/binh_giu_nhiet.png",
+          "descriptionOfItemReplace": "Tới cuối ngày nước vẫn ấm/mát như ban đầu, thích thú quá chừng!"
+        },
+        {
+          "pointOfItemReplace": 4.4,
+          "nameOfItemReplace": "Bình nhựa dùng nhiều lần",
+          "imageOfItemReplace": "newIcon/chai_nhua_n_lan.png",
+          "descriptionOfItemReplace": "Dùng bình xinh, uống đủ nước, cả bạn và môi trường đều vui!"
+        }
+      ],
+      "indexOfItemReplace": 0
     },
     {
       "id": "tui_nilon",
@@ -19,10 +30,21 @@
       "name": "Túi Nilon",
       "image": "newIcon/tui_nilon.png",
       "description": "Với tuổi thọ lên đến 500 năm và hơn 160.000 chiếc được tiêu thụ mỗi giây, túi nilon có “dân số” khổng lồ trên thế giới. Độ đàn hồi cao giúp túi nilon có thể đựng được mọi thứ, kể cả đồ ăn. Nhưng khi ở nhiệt độ cao, chúng sẽ tiết ra độc tố gây ung thư. Khi xâm nhập vào môi trường biển, túi nilon trở thành chiếc bẫy nguy hiểm do nhiều loài sinh vật biển thường nhầm chúng với thức ăn ưa thích - sứa biển.",
-      "pointOfItemReplace": 2.63,
-      "nameOfItemReplace": "Túi tote vải cứng cáp",
-      "imageOfItemReplace": "newIcon/tote.png",
-      "descriptionOfItemReplace": "Chiếc túi màu sắc này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 2.63,
+          "nameOfItemReplace": "Túi tote vải cứng cáp",
+          "imageOfItemReplace": "newIcon/tote.png",
+          "descriptionOfItemReplace": "Chiếc túi màu sắc này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+        },
+        {
+          "pointOfItemReplace": 2.63,
+          "nameOfItemReplace": "Túi vải không dệt gấp gọn",
+          "imageOfItemReplace": "newIcon/tui_vai.png",
+          "descriptionOfItemReplace": "Chiếc túi “nhỏ mà có võ” có thể gấp lại nhỏ xíu và mở ra to đùng, thật hợp khi đi mua sắm!"
+        }
+      ],
+      "indexOfItemReplace": 0
     },
     {
       "id": "hop_xop",
@@ -30,10 +52,27 @@
       "name": "Hộp xốp",
       "image": "newIcon/hop_xop.png",
       "description": "Các cơ sở chế biến thức ăn thường đựng thức ăn nóng trong hộp xốp,  nhưng ít ai biết rằng chúng chứa 5% polystyrene - một loại nhựa giãn nở khi gặp nhiệt độ cao có khả năng tiết ra độc tố, gây bệnh cho con người. Với tuổi thọ lên đến 500 năm, hộp xốp cũng là một vật cứng đầu và sẽ phân rã thành vi nhựa nếu không được xử lí đúng cách, tiếp tục ảnh hưởng một cách gián tiếp khi đã được sử dụng xong.",
-      "pointOfItemReplace": 4.37,
-      "nameOfItemReplace": "Hộp làm từ bã mía",
-      "imageOfItemReplace": "newIcon/hop_ba_mia.png",
-      "descriptionOfItemReplace": "Cứng cáp, dễ phân huỷ, quả là sự thay thế hoàn hảo cho hộp xốp."
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 2.64,
+          "nameOfItemReplace": "Hộp silicone tái sử dụng gấp gọn",
+          "imageOfItemReplace": "newIcon/hop_an_gap.png",
+          "descriptionOfItemReplace": "Đi tới đâu, cô chú bán hàng khen tới đó. Mình được ăn ngon lại đảm bảo an toàn!"
+        },
+        {
+          "pointOfItemReplace": 4.37,
+          "nameOfItemReplace": "Hộp làm từ bã mía",
+          "imageOfItemReplace": "newIcon/hop_ba_mia.png",
+          "descriptionOfItemReplace": "Cứng cáp, dễ phân huỷ, quả là sự thay thế hoàn hảo cho hộp xốp."
+        },
+        {
+          "pointOfItemReplace": 4.67,
+          "nameOfItemReplace": "Hộp làm từ nguyên liệu phân huỷ tự nhiên như giấy",
+          "imageOfItemReplace": "newIcon/hop_ba_mia.png",
+          "descriptionOfItemReplace": "Đề xuất bỏ, hộp giấy đựng thức ăn cần tráng lớp phim nhựa => khó tái chế hơn hộp chỉ có nhựa + tốn gỗ"
+        }
+      ],
+      "indexOfItemReplace": 0
     },
     {
       "id": "coc_nhua",
@@ -41,10 +80,39 @@
       "name": "Ly nhựa dùng một lần",
       "image": "newIcon/coc_nhua.png",
       "description": "Với tần suất 1 người/ 1 ngày/ 1 ly sử dụng một lần, trung bình 1 năm cá nhân đó đã thải ra khoảng 10.5kg rác thải nhựa. 500 tỷ ly nhựa được tiêu thụ mỗi năm, mỗi chiếc ly có tuổi thọ lên đến 450 năm, bạn có thể tưởng tượng được lượng rác thải khổng lồ chỉ của riêng ly nhựa. Khi thải ra môi trường biển, ly nhựa sẽ trở thành “ngôi nhà” của các loài sinh vật biển, đôi khi khiến chúng chết ngạt. ",
-      "pointOfItemReplace": 2.93,
-      "nameOfItemReplace": "Cốc làm từ thuỷ tinh tái sử dụng",
-      "imageOfItemReplace": "newIcon/coc_thuy_tinh.png",
-      "descriptionOfItemReplace": "Chiếc cốc xinh xắn lấp lánh dưới ánh mặt trời, lại còn “chung thuỷ” lâu dài nữa chứ!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 2.93,
+          "nameOfItemReplace": "Cốc làm từ thuỷ tinh tái sử dụng",
+          "imageOfItemReplace": "newIcon/coc_thuy_tinh.png",
+          "descriptionOfItemReplace": "Chiếc cốc xinh xắn lấp lánh dưới ánh mặt trời, lại còn “chung thuỷ” lâu dài nữa chứ!"
+        },
+        {
+          "pointOfItemReplace": 4.27,
+          "nameOfItemReplace": "Cốc làm từ nhựa cứng tái sử dụng",
+          "imageOfItemReplace": "newIcon/coc_nhua_n_lan.png",
+          "descriptionOfItemReplace": "Chiếc cốc màu sắc này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+        },
+        {
+          "pointOfItemReplace": 4.27,
+          "nameOfItemReplace": "Cốc silicone tái sử dụng gấp gọn",
+          "imageOfItemReplace": "newIcon/coc_gap.png",
+          "descriptionOfItemReplace": "Đi tới đâu, cô chú bán hàng khen tới đó. Mình được uống ngon lại đảm bảo an toàn!"
+        },
+        {
+          "pointOfItemReplace": 6.49,
+          "nameOfItemReplace": "Cốc giấy sinh học dùng một lần",
+          "imageOfItemReplace": "newIcon/coc_nhua_n_lan.png",
+          "descriptionOfItemReplace": "Đề xuất bỏ, dù là nguyên liệu nào cũng tránh DÙNG 1 LẦN"
+        },
+        {
+          "pointOfItemReplace": 6.79,
+          "nameOfItemReplace": "Cốc giấy dùng một lần",
+          "imageOfItemReplace": "newIcon/coc_nhua_n_lan.png",
+          "descriptionOfItemReplace": "Đề xuất bỏ, dù là nguyên liệu nào cũng tránh DÙNG 1 LẦN + cần tráng phim nhựa => ko thể tái chế + tốn gỗ"
+        }
+      ],
+      "indexOfItemReplace": 0
     },
     {
       "id": "dung_cu_an",
@@ -52,10 +120,27 @@
       "name": "Dụng cụ ăn một lần",
       "image": "newIcon/dung_cu_an_nhua.png",
       "description": "Chúng ta thường dùng dao dĩa nhựa để ăn, kể cả thức ăn nóng, nhưng ít ai biết rằng chúng chứa 5% polystyrene - một loại nhựa giãn nở khi gặp nhiệt độ cao có khả năng tiết ra độc tố, gây bệnh cho con người. Với tuổi thọ lên đến 500 năm, dao dĩa nhựa cũng là một vật cứng đầu và sẽ phân rã thành vi nhựa nếu không được xử lý đúng cách, tiếp tục ảnh hưởng một cách gián tiếp khi đã được sử dụng xong.",
-      "pointOfItemReplace": 3.04,
-      "nameOfItemReplace": "Dụng cụ ăn uống làm từ thép không gỉ ",
-      "imageOfItemReplace": "newIcon/dung_cu_an_kim_loai.png",
-      "descriptionOfItemReplace": "Chúng ta cùng thưởng thức bữa ăn như “hoàng gia” thiên nhiên nhé!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 3.04,
+          "nameOfItemReplace": "Dụng cụ ăn uống làm từ thép không gỉ",
+          "imageOfItemReplace": "newIcon/dung_cu_an_kim_loai.png",
+          "descriptionOfItemReplace": "Chúng ta cùng thưởng thức bữa ăn như “hoàng gia” thiên nhiên nhé!"
+        },
+        {
+          "pointOfItemReplace": 3.53,
+          "nameOfItemReplace": "Dụng cụ ăn uống làm từ nhựa cứng",
+          "imageOfItemReplace": "newIcon/dung_cu_an_nhua.png",
+          "descriptionOfItemReplace": "Bộ dụng cụ màu sắc này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+        },
+        {
+          "pointOfItemReplace": 6.23,
+          "nameOfItemReplace": "Dụng cụ ăn uống làm từ gỗ hoặc tre",
+          "imageOfItemReplace": "newIcon/dung_cu_an_go.png",
+          "descriptionOfItemReplace": "Cứng cáp, dễ phân huỷ, quả là sự thay thế hoàn hảo cho thìa dĩa nhựa dùng 1 lần."
+        }
+      ],
+      "indexOfItemReplace": 0
     },
     {
       "id": "ong_hut",
@@ -63,10 +148,51 @@
       "name": "Ống hút nhựa",
       "image": "newIcon/ong_hut_nhua.png",
       "description": "Ống hút nhựa có tuổi thọ lên đến 500 năm và có tới hơn 500 triệu chiếc được sử dụng mỗi ngày chỉ tính riêng tại Mỹ. Với khả năng đổi màu, uốn cong, rút ngắn hoặc phình to để phục vụ nhu cầu của con người, ống hút nhựa rất được ưa chuộng từ những tiệm trà sữa lề đường đến các nhà hàng, quán bar. Tuy nhiên, chúng có thể mang lại đau đớn khôn cùng cho các sinh vật khác, như trường hợp một chiếc ống hút chui vào mũi rùa biển và khiến chú chết ngạt.",
-      "pointOfItemReplace": 2.93,
-      "nameOfItemReplace": "Ống hút thuỷ tinh",
-      "imageOfItemReplace": "newIcon/ong_hut_thuy_tinh.png",
-      "descriptionOfItemReplace": "Chiếc ống hút xinh xắn lấp lánh dưới ánh mặt trời, lại còn “chung thuỷ” lâu dài nữa chứ!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 0,
+          "nameOfItemReplace": "Không sử dụng ống hút",
+          "imageOfItemReplace": "newIcon/ong_hut_thuy_tinh.png",
+          "descriptionOfItemReplace": "Cần chi ống hút khi ta có thể uống nước trực tiếp ha?"
+        },
+        {
+          "pointOfItemReplace": 2.93,
+          "nameOfItemReplace": "Ống hút thuỷ tinh",
+          "imageOfItemReplace": "newIcon/ong_hut_thuy_tinh.png",
+          "descriptionOfItemReplace": "Chiếc ống hút xinh xắn lấp lánh dưới ánh mặt trời, lại còn “chung thuỷ” lâu dài nữa chứ!"
+        },
+        {
+          "pointOfItemReplace": 2.93,
+          "nameOfItemReplace": "Ống hút làm từ thép không gỉ",
+          "imageOfItemReplace": "newIcon/ong_hut_kim_loai.png",
+          "descriptionOfItemReplace": "Chiếc ống hút màu sắc này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+        },
+        {
+          "pointOfItemReplace": 3.12,
+          "nameOfItemReplace": "Ống hút làm từ tre",
+          "imageOfItemReplace": "newIcon/ong_hut_tre.png",
+          "descriptionOfItemReplace": "Chiếc ống hút tre này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+        },
+        {
+          "pointOfItemReplace": 5.67,
+          "nameOfItemReplace": "Ống hút làm từ giấy dùng một lần",
+          "imageOfItemReplace": "newIcon/ong_hut_thuy_tinh.png",
+          "descriptionOfItemReplace": "Đề xuất bỏ, ống hút giấy cần tráng phim nhựa => ko thể tái chế + tốn gỗ"
+        },
+        {
+          "pointOfItemReplace": 5.83,
+          "nameOfItemReplace": "Ống hút tái chế dùng một lần",
+          "imageOfItemReplace": "newIcon/ong_hut_thuy_tinh.png",
+          "descriptionOfItemReplace": "Đề xuất bỏ, dù là nguyên liệu nào cũng tránh DÙNG 1 LẦN"
+        },
+        {
+          "pointOfItemReplace": 5.85,
+          "nameOfItemReplace": "Ống hút ăn được dùng một lần",
+          "imageOfItemReplace": "newIcon/ong_hut_an_dc.png",
+          "descriptionOfItemReplace": "Uống xong cốc nước, mình nhai rộp rộp cả chiếc ống hút mềm, ngon dữ ta!"
+        }
+      ],
+      "indexOfItemReplace": 0
     },
     {
       "id": "ban_chai",
@@ -74,34 +200,65 @@
       "name": "Bàn chải và kem đánh răng dùng một lần",
       "image": "newIcon/ban_chai_1_lan.png",
       "description": "Bàn chải nhựa dùng 1 lần xuất hiện ở tất cả các cơ sở lưu trú từ bình dân đến sang trọng, là món đồ vệ sinh rất đỗi quen thuộc. Tuy nhiên với giá thành rẻ, chúng thường có chất lượng thấp, phần lông cứng dễ đâm vào chân răng gây viêm và chảy máu. Khi thải ra, phần lông chải sẽ phân huỷ thành vi nhựa, còn phần cán dài có thể gây nguy hiểm cho các sinh vật biển nếu bị lầm tưởng thành mồi.",
-      "pointOfItemReplace": 0,
-      "nameOfItemReplace": "Bàn chải và kem đánh răng dùng nhiều lần",
-      "imageOfItemReplace": "newIcon/ban_chai_nhieu_lan.png",
-      "descriptionOfItemReplace": "Đồ mình dùng quen vẫn là thích nhất. Vị kem đánh răng ấy mới dễ chịu làm sao!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 0,
+          "nameOfItemReplace": "Bàn chải và kem đánh răng dùng nhiều lần",
+          "imageOfItemReplace": "newIcon/ban_chai_nhieu_lan.png",
+          "descriptionOfItemReplace": "Đồ mình dùng quen vẫn là thích nhất. Vị kem đánh răng ấy mới dễ chịu làm sao!"
+        }
+      ],
+      "indexOfItemReplace": 0
     },
-    
     {
       "id": "vs_ca_nhan",
       "point": 8.54,
       "name": "Vật dụng vệ sinh cá nhân dùng một lần",
       "image": "newIcon/vs_ca_nhan_1_lan.png",
       "description": "Là vật dụng phổ biến trong các khách sạn, mỗi bộ đồ vệ sinh cá nhân sau khi dùng sẽ thải ra một lượng nhựa vô cùng phí phạm. Chúng rất khó thu gom, lại khá dày dặn so với loại nilon và nhựa thông thường. Những mảnh vụn nhỏ khi xé bao bì dễ dàng trôi xuống cống và chảy thẳng ra biển làm mồi cho các sinh vật biển.",
-      "pointOfItemReplace": 1.76,
-      "nameOfItemReplace": "Chai rỗng đựng dầu gội sữa tắm tái sử dụng (không nhựa)",
-      "imageOfItemReplace": "newIcon/chai_rong_ko_nhua.png",
-      "descriptionOfItemReplace": ""
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 0,
+          "nameOfItemReplace": "Xà bông cục đa năng (không bọc)",
+          "imageOfItemReplace": "newIcon/xa_bong.png",
+          "descriptionOfItemReplace": ""
+        },
+        {
+          "pointOfItemReplace": 1.76,
+          "nameOfItemReplace": "Chai rỗng đựng dầu gội sữa tắm tái sử dụng (không nhựa)",
+          "imageOfItemReplace": "newIcon/chai_rong_ko_nhua.png",
+          "descriptionOfItemReplace": ""
+        },
+        {
+          "pointOfItemReplace": 3.53,
+          "nameOfItemReplace": "Chai rỗng đựng dầu gội sữa tắm tái sử dụng (chất liệu nhựa)",
+          "imageOfItemReplace": "newIcon/chai_rong_nhua_n_lan.png",
+          "descriptionOfItemReplace": ""
+        }
+      ],
+      "indexOfItemReplace": 0
     },
-    
     {
       "id": "gang_tay",
       "point": 8.55,
       "name": "Găng tay dùng một lần",
       "image": "newIcon/gang_tay_1_lan.png",
       "description": "Găng tay nilon thường được tạo nên từ các loại nilon tái chế, chứa nhiều độc tố hơn nilon thường. Khi tiếp xúc với nhiệt độ cao, loại nilon này có thể làm chất độc xâm nhập vào cơ thể và gây ra một số dị tật bẩm sinh. Với màu sắc trong suốt và hình dạng như bàn tay người, khi bị thải ra môi trường biển, chúng có thể trôi nổi hàng trăm năm và vô tình trở thành một chiếc bẫy hoàn hảo cho các loài cá nhỏ.",
-      "pointOfItemReplace": 4.27,
-      "nameOfItemReplace": "Găng tay tái sử dụng",
-      "imageOfItemReplace": "newIcon/gang_tay_n_lan.png",
-      "descriptionOfItemReplace": "Đôi găng xinh xinh này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 0,
+          "nameOfItemReplace": "Rửa tay thường xuyên",
+          "imageOfItemReplace": "newIcon/rua_tay.png",
+          "descriptionOfItemReplace": "Bàn tay xinh xinh, chăm rửa sạch đều, cần gì chiếc găng dùng xong rồi vứt kia!"
+        },
+        {
+          "pointOfItemReplace": 4.27,
+          "nameOfItemReplace": "Găng tay tái sử dụng",
+          "imageOfItemReplace": "newIcon/gang_tay_n_lan.png",
+          "descriptionOfItemReplace": "Đôi găng xinh xinh này đã cùng mình \"chinh chiến\" qua bao nhiêu chuyến đi mà vẫn bền như ngày đầu!"
+        }
+      ],
+      "indexOfItemReplace": 0
     },
     {
       "id": "goi_tra",
@@ -109,10 +266,21 @@
       "name": "Gói trà & cafe dùng một lần",
       "image": "newIcon/goi_tra_1_lan.png",
       "description": "Là thức uống phổ biến trong các khách sạn và mỗi khi đi du lịch, cafe gói và snack lại ẩn chứa mối nguy lớn đối với môi trường. Chúng rất khó thu gom, lại khá dày dặn so với túi nilon thông thường. Những mảnh vụn nhỏ khi xé bao bì dễ dàng trôi xuống cống và chảy thẳng ra biển làm mồi cho các sinh vật biển.",
-      "pointOfItemReplace": 6.59,
-      "nameOfItemReplace": "Gói nhỏ dùng một lần làm bằng giấy",
-      "imageOfItemReplace": "newIcon/goi_tra_giay.png",
-      "descriptionOfItemReplace": "Gói giấy nhỏ xinh, dễ mang theo, dễ phân huỷ, tiện lợi quá ta ơi!"
+      "listItemReplace": [
+        {
+          "pointOfItemReplace": 3.53,
+          "nameOfItemReplace": "Hộp lớn dùng nhiều lần",
+          "imageOfItemReplace": "newIcon/goi_tra_giay.png",
+          "descriptionOfItemReplace": "Hộp thiếc xinh xinh đựng trà hay cà phê yêu thích của mình, mà còn có thể tái sử dụng nữa!"
+        },
+        {
+          "pointOfItemReplace": 6.59,
+          "nameOfItemReplace": "Gói nhỏ dùng một lần làm bằng giấy",
+          "imageOfItemReplace": "newIcon/hop_tra_n_lan.png",
+          "descriptionOfItemReplace": "Gói giấy nhỏ xinh, dễ mang theo, dễ phân huỷ, tiện lợi quá ta ơi!"
+        }
+      ],
+      "indexOfItemReplace": 0
     }
   ]
 }

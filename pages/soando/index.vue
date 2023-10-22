@@ -23,7 +23,7 @@
                 <img v-if="!listItemPaginate[0].notUsePlastic" @click="fetchItemDetail(listItemPaginate[0].id, 0)"
                   class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[0].image}`)">
                 <img v-else class="w-auto h-24 max100"
-                  :src="require(`~/static/img/${listItemPaginate[0].imageOfItemReplace}`)">
+                  :src="require(`~/static/img/${listItemPaginate[0].itemReplace.imageOfItemReplace}`)">
                 <div @click="unpickItem(0)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
               </div>
@@ -36,7 +36,7 @@
                 <img v-if="!listItemPaginate[1].notUsePlastic" @click="fetchItemDetail(listItemPaginate[1].id, 1)"
                   class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[1].image}`)">
                 <img v-else class="w-auto h-24 max100"
-                  :src="require(`~/static/img/${listItemPaginate[1].imageOfItemReplace}`)">
+                  :src="require(`~/static/img/${listItemPaginate[1].itemReplace.imageOfItemReplace}`)">
                 <div @click="unpickItem(1)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
               </div>
@@ -49,7 +49,7 @@
                 <img v-if="!listItemPaginate[2].notUsePlastic" @click="fetchItemDetail(listItemPaginate[2].id, 2)"
                   class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[2].image}`)">
                 <img v-else class="w-auto h-24 max100"
-                  :src="require(`~/static/img/${listItemPaginate[2].imageOfItemReplace}`)">
+                  :src="require(`~/static/img/${listItemPaginate[2].itemReplace.imageOfItemReplace}`)">
                 <div @click="unpickItem(2)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
               </div>
@@ -62,7 +62,7 @@
                 <img v-if="!listItemPaginate[3].notUsePlastic" @click="fetchItemDetail(listItemPaginate[3].id, 3)"
                   class="w-auto h-24 max100" :src="require(`~/static/img/${listItemPaginate[3].image}`)">
                 <img v-else class="w-auto h-24 max100"
-                  :src="require(`~/static/img/${listItemPaginate[3].imageOfItemReplace}`)">
+                  :src="require(`~/static/img/${listItemPaginate[3].itemReplace.imageOfItemReplace}`)">
                 <div @click="unpickItem(3)" class="right-2 top-2 w-4 h-4 mt-2 absolute">
                 </div>
               </div>
@@ -112,18 +112,30 @@
       v-if="this.screenIsShowing === listScreen?.itemReplace">
       <div class="flex flex-col items-center">
         <h3 class="font-bold text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
-        <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ this.itemChosen.pointOfItemReplace }}</h3>
-        <img class="w-1/4 my-10" :src="require(`~/static/img/${itemChosen.imageOfItemReplace}`)">
-        <h5 class="font-bold text-2xl text-center font-phu-du text-blue1">{{ this.itemChosen.nameOfItemReplace }}</h5>
-        <h5 class="text-blue1 font-livic mt-3 text-center w-90">{{ this.itemChosen.descriptionOfItemReplace }}</h5>
-      </div>
-      <div class="mb-5 w-full flex items-center flex-col">
-        <button @click="chooseItemReplace()" class="bg-button bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
-          <span class="text-white1 tracking-wide font-phu-du normal-case font-bold">DÙNG LỰA CHỌN NÀY</span>
-        </button>
-        <button @click="usePlastic()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
-          <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
-        </button>
+        <swiper class="swipperReplace" :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
+          :slides-per-view="1" :navigation="true" @slideChange="onSlideChangeItemReplace">
+          <swiper-slide v-for="n in itemChosen.listItemReplace.length" :key="n" :class="{ w_100px: true }">
+            <div class="flex flex-col items-center">
+              <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ itemChosen.listItemReplace[n -
+                1].pointOfItemReplace }}</h3>
+              <img class="w-1/4 my-10"
+                :src="require(`~/static/img/${itemChosen.listItemReplace[n - 1].imageOfItemReplace}`)">
+              <h5 class="font-bold text-2xl text-center font-phu-du text-blue1">{{ itemChosen.listItemReplace[n -
+                1].nameOfItemReplace }}</h5>
+              <h5 class="text-blue1 font-livic mt-3 text-center w-90">{{ itemChosen.listItemReplace[n -
+                1].descriptionOfItemReplace }}</h5>
+            </div>
+            <div class="mb-5 w-full flex items-center flex-col">
+              <button @click="chooseItemReplace(n - 1)"
+                class="bg-button bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
+                <span class="text-white1 tracking-wide font-phu-du normal-case font-bold">DÙNG LỰA CHỌN NÀY</span>
+              </button>
+              <button @click="usePlastic()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
+                <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
+              </button>
+            </div>
+          </swiper-slide>
+        </swiper>
       </div>
     </div>
 
@@ -145,15 +157,15 @@
             <tr class=" h-10" v-for="(  item, index  ) in   listItemChosen  " :key="index">
               <td>
                 <div class="relative w-8 h-8 bg-checkbox bg-no-repeat bg-contain">
-                  <img class="zoom-out absolute" :src="require(`~/static/img/${item.imageOfItemReplace}`)"
+                  <img class="zoom-out absolute" :src="require(`~/static/img/${item.itemReplace.imageOfItemReplace}`)"
                     v-if="item.notUsePlastic">
                   <img class="zoom-out absolute" :src="require(`~/static/img/${item.image}`)" v-else>
                 </div>
               </td>
 
-              <td class="pl-2 font-livic text-blue1" v-if="item.notUsePlastic">{{ item.nameOfItemReplace }}</td>
+              <td class="pl-2 font-livic text-blue1" v-if="item.notUsePlastic">{{ item.itemReplace.nameOfItemReplace }}</td>
               <td class="pl-2 font-livic text-blue1" v-else>{{ item.name }}</td>
-              <td class="font-livic text-blue1" v-if="item.notUsePlastic">{{ item.pointOfItemReplace }}</td>
+              <td class="font-livic text-blue1" v-if="item.notUsePlastic">{{ item.itemReplace.pointOfItemReplace }}</td>
               <td class="font-livic text-blue1" v-else>{{ item.point }}</td>
             </tr>
           </tbody>
@@ -161,7 +173,7 @@
         <div class="w-90 flex justify-center my-3">
           <img src="~/static/img/hr_blue.png" alt="hr">
         </div>
-        <h5 class="font-livic text-blue1 text-center mx-8">Bạn đang mang theo <strong>{{ this.itemChosen.nameOfItemReplace
+        <h5 class="font-livic text-blue1 text-center mx-8">Bạn đang mang theo <strong>{{ this.listItemChosen.length
           || 0
         }} sản phẩm</strong> nhựa
           dùng một lần. Bạn chắc chắn với lựa chọn trên?</h5>
@@ -343,9 +355,6 @@ export default {
     getSharingUrl() {
       return `https://kiengnhua.vn/result/${this.totalPoint}/${this.totalPointBefore}`;
     },
-    getImageUrl(imageId) {
-      return `https://picsum.photos/600/400/?image=${imageId}`;
-    },
     onSwiper(swiper) {
       console.log("on swiper", swiper);
     },
@@ -377,13 +386,14 @@ export default {
     unpickItem(index) {
       if (!this.listItemPaginate[index].isPicked) return;
       if (this.listItemPaginate[index].notUsePlastic) {
-        this.totalPoint -= this.listItemPaginate[index].pointOfItemReplace;
+        this.totalPoint -= this.listItemPaginate[index].itemReplace.pointOfItemReplace;
       } else {
         this.totalPoint -= this.listItemPaginate[index].point;
       }
       this.listItemPaginate[index].isPicked = false;
       this.listItemPaginate[index].notUsePlastic = false;
     },
+    onSlideChangeItemReplace() { },
 
     completePrepare() {
       this.listItemChosen = this.listItem.items.filter(item => item.isPicked);
@@ -393,15 +403,18 @@ export default {
     showItemReplace() {
       this.screenIsShowing = listScreen.itemReplace;
     },
-    chooseItemReplace() {
+    chooseItemReplace(index) {
       this.listItemPaginate[this.indexOfItemChosen].notUsePlastic = true;
       this.itemChosen.notUsePlastic = true;
-      this.totalPoint = this.totalPoint - this.itemChosen.point + this.itemChosen.pointOfItemReplace;
+      this.itemChosen.indexOfItemReplace = index;
+      this.itemChosen.itemReplace = this.itemChosen.listItemReplace[index];
+      this.totalPoint = this.totalPoint - this.itemChosen.point + this.itemChosen.itemReplace.pointOfItemReplace;
       this.backToPreparation();
     },
     usePlastic() {
       this.listItemPaginate[this.indexOfItemChosen].notUsePlastic = false;
       this.itemChosen.notUsePlastic = false;
+      this.itemChosen.indexOfItemReplace = null;
       this.backToPreparation();
     },
     formatNumber(number) {
@@ -544,4 +557,24 @@ export default {
 a.share-network-facebook {
   width: 100%;
 }
-</style>
+
+.swipperReplace.swiper-container {
+  position: static !important;
+}
+/* 
+.swiper-container {
+  position: static !important;
+} */
+
+.swipperReplace {
+  width: 390px;
+}
+
+.swiper-slide-active {
+  display: flex;
+  flex-direction: column;
+}
+
+.w_100px {
+  width: 390px !important;
+}</style>
