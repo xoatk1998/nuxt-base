@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center bg-white1 min-h-screen justify-between">
     <!-- Screen Prepare Vali -->
-    <div class="pickItem flex flex-col justify-between" v-if="this.screenIsShowing === listScreen?.listItems">
+    <div class="pickItem flex flex-col justify-between" v-show="this.screenIsShowing === listScreen?.listItems">
       <div class="flex flex-col justify-between items-center">
         <h3 class="font-black text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
         <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ formatNumber(this.totalPoint) }}</h3>
