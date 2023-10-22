@@ -21,7 +21,7 @@
       <div class="w-90 flex justify-center mb-3">
         <img src="~/static/img/hr_blue.png" alt="hr">
       </div>
-      <h3 class="font-bold text-2xl text-center font-phu-du text-blue1 mt-5 mb-2">ĐIỂM HẠI MÔI TRƯỜNG</h3>
+      <h3 class="font-bold text-2xl text-center font-phu-du text-blue1 mt-5 mb-2">CAM KẾT MỘT VALI “Kiêng Nhựa"</h3>
       <div class="font-livic text-blue1 w-90 text-center text-base leading-1">Vì một trái đất “xanh" và một cơ thể lành
         mạnh,
         tôi cam kết trong chuyến đi này sẽ mang theo
@@ -42,9 +42,9 @@
         <img src="~/static/img/tu_nay_goi_toi.png">
       </div>
       <div class="h-16 w-16 rounded-full flex items-center justify-center bg-black relative">
-        <img class="object-cover rounded-full boder-solid" :src="previewImage" :class="{ hidden: !previewImage }" />
+        <img class="h-16 w-16 object-cover rounded-full boder-solid" :src="previewImage" :class="{ hidden: !previewImage }" />
       </div>
-      <h3 class="font-phu-du text-3xl text-cyan1 my-3 font-bold">{{ userName || 'Tên người dùng' }}</h3>
+      <h3 class="font-phu-du text-3xl text-cyan1 my-3 font-bold">{{ userName || '' }}</h3>
       <h4 class="font-phu-du text-2xl text-white1 font-bold mt-2">CAM KẾT MỘT VALI “Kiêng Nhựa"</h4>
       <div class="font-livic text-white1 text-center text-base leading-1" style="width: 85%;">Vì một trái đất “xanh" và một cơ thể lành
         mạnh,
