@@ -1,16 +1,5 @@
 <template>
   <div>
-    <h1>Result for Param pointResult: {{ pointResult }}</h1>
-    <h1>Result for Param pointBefore: {{ pointBefore }}</h1>
-    <!-- <h1>Result for Param Two: {{ this.params.point_before }}</h1> -->
-    
-    <!-- Your page content here -->
-    In this example, $route.params.param_one and $route.params.param_two retrieve the dynamic parameters param_one and
-    param_two from the URL, respectively. You can use these parameters to customize the content of the page based on the
-    dynamic values provided in the route.
-
-    By following this structure, you can handle routes with two parameters, each containing multiple words, in your
-    Nuxt.js application.
   </div>
 </template>
 
@@ -38,12 +27,17 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.getTitle(this.pointBefore) // Use the data variable in the meta description
+          content: this.getTitle(this.pointResult) // Use the data variable in the meta description
         },
         {
           hid: 'og:description',
           name: 'og:description',
-          content: this.getDescription(this.pointBefore) // Use the data variable in the meta description
+          content: this.getDescription(this.pointResult, this.pointBefore) // Use the data variable in the meta description
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.getImageUrl(this.pointResult) // Use the data variable in the meta description
         },
       ]
     };
