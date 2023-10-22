@@ -5,7 +5,10 @@
       <div class="flex flex-col justify-between items-center">
         <h3 class="font-black text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
         <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ formatNumber(this.totalPoint) }}</h3>
-        <img class="" src="~/static/img/good_point_preparation.png">
+        <img v-if="this.totalPoint <= 10" src="~/static/img/image_header_lv1.png">
+        <img v-if="this.totalPoint > 10 && this.totalPoint <= 20" src="~/static/img/image_header_lv2.png">
+        <img v-if="this.totalPoint > 20 && this.totalPoint <= 30" src="~/static/img/image_header_lv3.png">
+        <img v-if="this.totalPoint > 30" src="~/static/img/image_header_lv4.png">
         <p class="font-livic text-center text-blue1 mx-5 my-2">Bạn đang mang theo những sản phẩm nhựa dùng một lần nào
           dưới đây?</p>
         <swiper :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
@@ -194,7 +197,7 @@
       v-if="this.screenIsShowing === listScreen?.result">
       <div class="flex flex-col items-center justify-center">
         <div v-show="this.totalPoint <= 10">
-          <img :src="require(`~/static/img/level1.svg`)">
+          <img class="imageHeader" src="~/static/img/level1.png">
           <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Bạn đã "kiêng nhựa" thành công với điểm
             hại môi trường là</h4>
           <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
@@ -206,7 +209,7 @@
           </h4>
         </div>
         <div v-show="this.totalPoint > 10 && this.totalPoint <= 20">
-          <div class="w-85 h-auto"><img class="w-full" :src="require(`~/static/img/level2.svg`)"></div>
+          <div class="w-85 h-auto"><img class="imageHeader" src="~/static/img/level2.png"></div>
           <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Thêm chút nỗ lực, bạn sẽ "kiêng nhựa"
             tốt
             hơn cả điểm bên dưới</h4>
@@ -219,7 +222,7 @@
           </h4>
         </div>
         <div v-show="this.totalPoint > 20 && this.totalPoint <= 30">
-          <img :src="require(`~/static/img/level3.svg`)">
+          <img class="imageHeader" src="~/static/img/level3.png">
           <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Còn rất nhiều sản phẩm thay thế cho hành
             lý của bạn "xanh" hơn</h4>
           <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
@@ -231,7 +234,7 @@
           </h4>
         </div>
         <div v-show="this.totalPoint > 30">
-          <img :src="require(`~/static/img/level4.svg`)">
+          <img class="imageHeader" src="~/static/img/level4.png">
           <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Hãy "kiêng nhựa" ngay và luôn để giảm
             điểm
             hại môi trường dưới đây</h4>
@@ -574,7 +577,9 @@ a.share-network-facebook {
   display: flex;
   flex-direction: column;
 }
-
+.imageHeader {
+  scale: 0.8;
+}
 .w_100px {
   width: 390px !important;
 }</style>
