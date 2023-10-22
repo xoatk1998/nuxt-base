@@ -1,9 +1,11 @@
 <template>
   <div>
+    <Home></Home>
   </div>
 </template>
 
 <script>
+import Home from '../../index.vue';
 export default {
   data() {
     return {
@@ -11,9 +13,9 @@ export default {
       pointBefore: '0'
     }
   },
-  // async fetch({ params }) {
-  //   return { params };
-  // },
+  components: {
+    Home
+  },
   async asyncData({ params }) {
     const pointResult = (+params.point_result).toFixed(2);
     const pointBefore = (+params.point_before).toFixed(2);

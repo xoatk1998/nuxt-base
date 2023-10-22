@@ -58,10 +58,11 @@
       </div>
       </div>
       <div class="w-full flex justify-center my-5">
-        <button @click="shareFB()"
-          class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain">
-          <span class="text-cyan1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ cam kết</span>
-        </button>
+        <ShareNetwork network="facebook" :url="getSharingUrl()" hashtags="kiengnhua">
+          <button class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain">
+            <span class="text-cyan1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ cam kết</span>
+          </button>
+        </ShareNetwork>
       </div>
     </div>
   </div>
@@ -89,6 +90,9 @@ export default {
     }
   },
   methods: {
+    getSharingUrl() {
+      return `https://kiengnhua.vn/camket/${this.userName}`;
+    },
     handleFileUpload(event) {
       const file = event.target.files[0];
       const reader = new FileReader();
@@ -136,6 +140,11 @@ input[type="file"] {
   font-size: 30px;
   line-height: 36px;
 }
+
+a.share-network-facebook {
+  width: 100%;
+}
+
 .customInput:focus, .customInput:focus-visible{
   outline: none;
   box-shadow: none;
