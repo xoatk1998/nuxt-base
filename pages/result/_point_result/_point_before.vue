@@ -15,19 +15,18 @@ export default {
   //   return { params };
   // },
   async asyncData({ params }) {
-    console.log(params, '-----params')
-    const pointResult = +(params.point_result).toFixed(2);
-    const pointBefore = +(params.point_before).toFixed(2);
+    const pointResult = (+params.point_result).toFixed(2);
+    const pointBefore = (+params.point_before).toFixed(2);
     return {pointBefore, pointResult};
   },
   head() {
     return {
-      title: this.pointBefore, // Use the data variable in the title
+      title: 'Kết quả', // Use the data variable in the title
       meta: [
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.getTitle(this.pointResult, pointBefore) // Use the data variable in the meta description
+          content: this.getTitle(this.pointResult, this.pointBefore) // Use the data variable in the meta description
         },
         {
           hid: 'og:description',
