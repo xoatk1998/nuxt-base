@@ -16,8 +16,8 @@ export default {
   // },
   async asyncData({ params }) {
     console.log(params, '-----params')
-    const pointResult = params.point_result;
-    const pointBefore = params.point_before;
+    const pointResult = formatNumber(params.point_result);
+    const pointBefore = formatNumber(params.point_before);
     return {pointBefore, pointResult};
   },
   head() {
@@ -27,7 +27,7 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.getTitle(this.pointResult) // Use the data variable in the meta description
+          content: this.getTitle(this.pointResult, pointBefore) // Use the data variable in the meta description
         },
         {
           hid: 'og:description',
@@ -43,12 +43,15 @@ export default {
     };
   },
   methods: {
-    getTitle(pointResult) {
+    formatNumber(number) {
+      return +(number).toFixed(2);
+    },
+    getTitle(pointResult, pointBefore) {
       if (pointResult <= 10) {
         return `Bạn đã kiêng nhựa thành công với số điểm ${pointResult}, thật xuất sắc!`
       }
       if (pointResult <= 20 && pointResult > 10) {
-        return `Điểm kiêng nhựa của bạn là ${pointResult}`
+        return `Điểm kiêng nhựa của bạn là ${pointResult}. Thêm chút nỗ lực, bạn sẽ kiêng nhựa tốt hơn cả số điểm này đó!. Trước khi kiêng nhựa, mức ảnh hưởng môi trường môi trường của bạn là ${pointBefore}`
       }
       if (pointResult <= 30 && pointResult > 20) {
         return `Điểm kiêng nhựa của bạn là ${pointResult}`
@@ -62,7 +65,8 @@ export default {
         return `Trước khi kiêng nhựa, điểm hại môi trường của bạn là ${pointBefore}`
       }
       if (pointResult <= 20 && pointResult > 10) {
-        return `Thêm chút nỗ lực, bạn sẽ kiêng nhựa tốt hơn cả số điểm này đó!. Trước khi kiêng nhựa, mức ảnh hưởng môi trường môi trường của bạn là ${pointBefore}`
+        return '';
+        // return `Thêm chút nỗ lực, bạn sẽ kiêng nhựa tốt hơn cả số điểm này đó!. Trước khi kiêng nhựa, mức ảnh hưởng môi trường môi trường của bạn là ${pointBefore}`
       }
       if (pointResult <= 30 && pointResult > 20) {
         return `Còn rất nhiều sản phẩm thay thế cho hành lý của bạn “xanh” hơn. Trước khi kiêng nhựa, mức ảnh hưởng môi trường môi trường của bạn là ${pointBefore}`
