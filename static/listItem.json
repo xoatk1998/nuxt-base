@@ -11,7 +11,7 @@
       "listItemReplace": [
         {
           "pointOfItemReplace": 2.2,
-          "nameOfItemReplace": "Bình giữ nhiệt bằng kim loại",
+          "nameOfItemReplace": "Bình nước cá nhân",
           "imageOfItemReplace": "newIcon/binh_giu_nhiet.png",
           "descriptionOfItemReplace": "Tới cuối ngày nước vẫn ấm/mát như ban đầu, thích thú quá chừng!"
         },
@@ -82,12 +82,6 @@
       "description": "Với tần suất 1 người/ 1 ngày/ 1 ly sử dụng một lần, trung bình 1 năm cá nhân đó đã thải ra khoảng 10.5kg rác thải nhựa. 500 tỷ ly nhựa được tiêu thụ mỗi năm, mỗi chiếc ly có tuổi thọ lên đến 450 năm, bạn có thể tưởng tượng được lượng rác thải khổng lồ chỉ của riêng ly nhựa. Khi thải ra môi trường biển, ly nhựa sẽ trở thành “ngôi nhà” của các loài sinh vật biển, đôi khi khiến chúng chết ngạt. ",
       "listItemReplace": [
         {
-          "pointOfItemReplace": 2.93,
-          "nameOfItemReplace": "Cốc làm từ thuỷ tinh tái sử dụng",
-          "imageOfItemReplace": "newIcon/coc_thuy_tinh.png",
-          "descriptionOfItemReplace": "Chiếc cốc xinh xắn lấp lánh dưới ánh mặt trời, lại còn “chung thuỷ” lâu dài nữa chứ!"
-        },
-        {
           "pointOfItemReplace": 4.27,
           "nameOfItemReplace": "Cốc làm từ nhựa cứng tái sử dụng",
           "imageOfItemReplace": "newIcon/coc_nhua_n_lan.png",
@@ -157,7 +151,7 @@
         },
         {
           "pointOfItemReplace": 2.93,
-          "nameOfItemReplace": "Ống hút thuỷ tinh",
+          "nameOfItemReplace": "Ống hút có thể tái sử dụng",
           "imageOfItemReplace": "newIcon/ong_hut_thuy_tinh.png",
           "descriptionOfItemReplace": "Chiếc ống hút xinh xắn lấp lánh dưới ánh mặt trời, lại còn “chung thuỷ” lâu dài nữa chứ!"
         },

@@ -12,7 +12,7 @@
         <p class="font-livic text-center text-blue1 mx-5 my-2">Bạn đang mang theo những sản phẩm nhựa dùng một lần nào
           dưới đây?</p>
         <swiper :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
-          :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange"
+          :pagination="{ clickable: true }" :navigation="true" @swiper="onSwiper" @slideChange="onSlideChange"
           v-if="this.listItemPaginate?.length">
           <swiper-slide v-for="n in   3  " :key="n" class="test" :class="{ w_100: true }">
             <!-- list item in a page -->

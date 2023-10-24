@@ -9,7 +9,7 @@ export default {
 <template>
   <div class="flex flex-col items-center font-phu-du">
     <div class="mt-7 h-14 w-14"><img class="w-full h-auto" alt="home-logo" src="~/static/img/1x/home_logo.png"></div>
-    <img class="mx-5 scale-90" src="~/static/img/earth_in_home.png">
+    <img class="mx-5 scale-90 image-header" src="~/static/img/earth_in_home.png">
 
     <h3 class="text-blue1 font-phu-du font-black leading-10 text-xl"> <span class="py-2 px-1">GIẢM "ĐIỂM NHỰA"
         -
@@ -106,5 +106,9 @@ export default {
 
 .top-2px {
   top: 2px;
+}
+
+.image-header {
+  width: 40vh;
 }
 </style>
