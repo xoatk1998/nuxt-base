@@ -38,17 +38,20 @@ export default {
         allowfullscreen></iframe>
 
     <div class="bg-cyan1 flex flex-col items-center w-full py-5 px-1">
-      <div class="font-phu-du font-bold text-white1 w-80 text-center ">
+      <div class="font-phu-du font-bold text-white1 w-80 text-center text-on-mobile">
         <span class="text-xl leading-1 px-1 py-2 font-black">NHỰA KHÔNG XẤU,</span> <br>
         <span class="text-xl leading-1 px-1 py-2 font-black">CHO TỚI KHI CHÚNG TA</span> <br>
         <span class="text-xl leading-1 px-1 py-2 font-black">DÙNG NHỰA THIẾU TRÁCH NHIỆM</span>
       </div>
+      <div class="font-phu-du font-bold text-white1 text-center text-on-desktop">
+        <span class="text-xl leading-1 px-1 py-2 font-black">NHỰA KHÔNG XẤU, CHO TỚI KHI CHÚNG TA DÙNG NHỰA THIẾU TRÁCH NHIỆM</span>
+      </div>
       <div class="font-livic text-blue1 text-center font-bold mx-6 mt-3 text-base">
         <div>Nằm trong khuôn khổ dự án “Giảm thiểu Rác thải nhựa đại dương tại Việt Nam” do Bộ Môi trường, Bảo tồn Thiên
-          nhiên và An toàn Hạt nhân CHLB Đức thông qua Tổ chức Quốc tế về Bảo tồn thiên nhiên
+          nhiên và An toàn Hạt nhân CHLB Đức
         </div>
         <div>
-          WWF - Việt Nam tài trợ, trang web “Kiêng Nhựa" giúp bạn định lượng mức độ hại môi trường của từng đồ nhựa sử
+          thông qua Tổ chức Quốc tế về Bảo tồn thiên nhiên WWF - Việt Nam tài trợ, trang web “Kiêng Nhựa" giúp bạn định lượng mức độ hại môi trường của từng đồ nhựa sử
           dụng một lần, để từ đó điều chỉnh hành vi dùng đồ nhựa có trách nhiệm hơn trong mỗi chuyến du lịch của mình.
         </div>
         <div class="mt-2">Cùng học cách hành trang du lịch “xanh
@@ -110,5 +113,33 @@ export default {
 
 .image-header {
   width: 40vh;
+}
+
+@media screen and (max-width: 768px) {
+  .text-on-mobile {
+    display: block;
+  }
+
+  .text-on-desktop {
+    display: none;
+  }
+}
+
+.text-on-mobile {
+    display: none;
+  }
+
+.text-on-desktop {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .text-on-mobile {
+    display: block;
+  }
+
+  .text-on-desktop {
+    display: none;
+  }
 }
 </style>
