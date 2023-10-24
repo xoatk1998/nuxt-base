@@ -31,6 +31,27 @@
 }
 
 @font-face {
+  font-family: 'phuduBold';
+  src: url('./fonts/Phudu-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'phuduSemiBold';
+  src: url('./fonts/Phudu-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'phuduMedium';
+  src: url('./fonts/Phudu-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "GeneralSans-Variable";
   src: url("./fonts/GeneralSans-Variable.woff2") format("woff2"),
     url("./fonts/GeneralSans-Variable.woff") format("woff"),
