@@ -63,11 +63,15 @@ export default {
 }
 
 .font-livic {
+  font-family: 'LivvicRegular';
+}
+
+.font-livic-bold {
   font-family: 'LivvicBold';
 }
 
 .font-phu-du {
-  font-family: 'phuduMedium';
+  font-family: 'LivvicRegular';
 }
 
 @keyframes going {

@@ -63,7 +63,7 @@ export default {
     },
     getDescription(pointResult, pointBefore) {
       if (pointResult <= 10) {
-        return `Trước khi kiêng nhựa, điểm hại môi trường của bạn là ${pointBefore}`
+        return `Trước khi kiêng nhựa, mức ảnh hưởng môi trưởng của bạn là ${pointBefore}`
       }
       if (pointResult <= 20 && pointResult > 10) {
         return `Thêm chút nỗ lực, bạn sẽ kiêng nhựa tốt hơn cả số điểm này đó!. Trước khi kiêng nhựa, mức ảnh hưởng môi trường môi trường của bạn là ${pointBefore}`

@@ -90,7 +90,7 @@
       <div class="itemDetail mt-5" v-if="item?.name">
         <h3 class="uppercase text-lg text-center text-blue1 font-black font-phu-du">{{ item.name }}</h3>
         <h5 class="text-sm text-center text-blue1 font-livic mx-4">{{ item.description }}</h5>
-        <h2 class="uppercase text-2xl font-bold text-center mt-3 mb-2 text-blue1 font-phu-du">Điểm hại môi trường
+        <h2 class="uppercase text-xl font-bold text-center mt-3 mb-2 text-blue1 font-livic-bold">MỨC ẢNH HƯỞNG MÔI TRƯỜNG
         </h2>
         <h2 class="uppercase text-4xl text-center text-cyan1 font-phu-du font-black">{{ item.point }}</h2>
       </div>

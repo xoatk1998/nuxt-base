@@ -6,29 +6,29 @@
       </div>
       <div class="w-full mx-auto flex flex-col items-center mt-5">
         <img src="~/static/img/info/kieng_nhua_la_cai_chi.png" title="kieng nhua la cai chi" alt="kieng_nhua_la_cai_chi">
-        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4 !normal-case">Website
-          Kiêng Nhựa liệt kê
-          những
-          vật phẩm nhựa dùng một lần phổ biến nhất và định lượng
-          mức hại môi trường của chúng dựa trên từng thang điểm khoa học, từ đó đề xuất những sản phẩm thay thế
-          thân
-          thiện môi trường hơn. Bảng định lượng đo mức hại môi trường của từng vật phẩm theo <strong>điểm từ 0 tới
+        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4 !normal-case">
+          Có thể bạn đã quen thuộc với những vật phẩm nhựa dùng một lần phổ biến nhất. Nhưng bạn có biết mức ảnh hưởng môi trường môi trường của chúng không?</p>
+        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4 !normal-case">
+          Website Kiêng Nhựa hy vọng có thể giúp bạn dễ dàng tra cứu mức độ ảnh hưởng môi trường của từng món đồ quen dùng, từ đó đề xuất những biện pháp giảm 
+          thiểu, tái sử dụng và thay thế bằng các sản phẩm thân thiện môi trường hơn. Bảng tra cứu đưa ra mức độ ảnh hưởng môi trường theo <strong>điểm từ 0 tới
             10</strong>, trong
           đó <strong>0 điểm</strong> là những
-          lựa chọn có <strong>tác động tiêu cực ít nhất</strong>, và <strong>10 điểm</strong> có tác động
+          lựa chọn có tác động tiêu cực ít nhất, và <strong>10 điểm</strong> có tác động
           <strong>tiêu
             cực nhiều nhất</strong>.
         </p>
-        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4">Định lượng này được dựa
-          trên nghiên cứu từ <strong>The Futouris - “Single-Use Plastic Guidance 2021”</strong>. Download nghiên
-          cứu
-          <a class=" underline font-bold" href="#">tại đây.</a>
+        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4">Bảng tra cứu này dựa trên báo cáo nghiên cứu
+           <strong>The Futouris - “Single-Use Plastic Guidance 2021”</strong>. Tham khảo
+          <a class=" underline font-bold" href="https://www.oneplanetnetwork.org/sites/default/files/from-crm/Futouris%2520Plastic%2520Guide_compressed.pdf">tại đây.</a>
         </p>
         <img class="honDao" src="~/static/img/hon_dao.png">
         <div class="w-full flex flex-col items-center justify-center gap-2 mt-3 mb-5 px-4">
           <button class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain" @click="showSlide()">
             <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">
               HƯỚNG DẪN "KIÊNG NHỰA"</span></button>
+          <button class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain" @click="showSlide()">
+            <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">
+              TRÍCH NGUỒN NGHIÊN CỨU</span></button>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
           alt="info_close">
       </div>
       <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)" />
-      <h3 class="font-bold text-2xl text-center font-phu-du text-cyan1 mt-10">Bước {{ this.step }}</h3>
+      <h3 class="font-livic-bold text-2xl text-center text-cyan1 mt-16">Bước {{ this.step }}</h3>
       <swiper class="info-swiper-custom" :slides-per-view="1" :pagination="true" :space-between="50" @slideChange="onSlideChange" :navigation="true">
         <swiper-slide>
           <img class="previewImg" src="~/static/img/huongdan/step1.png">
@@ -68,7 +68,7 @@
           <img class="previewImg border border-slate-300" src="~/static/img/huongdan/step8.png">
         </swiper-slide>
       </swiper>
-      <p class="mt-3 font-livic text-white1 text-center text-sm mx-3" v-html="this.stepDescription"></p>
+      <p class="mt-3 font-livic text-white1 text-center text-sm mx-3 leading-5" v-html="this.stepDescription"></p>
     </div>
   </div>
 </template>
@@ -123,9 +123,10 @@ export default {
 }
 
 .previewImg {
-  width: 50%;
-  margin-left: 25%;
+  width: 60%;
+  margin-left: 20%;
   margin-top: 5%;
   margin-bottom: 10%;
 }
+
 </style>

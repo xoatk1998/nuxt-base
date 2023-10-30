@@ -3,7 +3,7 @@
     <!-- Screen Prepare Vali -->
     <div class="pickItem flex flex-col justify-between" v-show="this.screenIsShowing === listScreen?.listItems">
       <div class="flex flex-col justify-between items-center">
-        <h3 class="font-black text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
+        <h3 class="font-black text-xl text-center font-livic-bold text-blue1 mt-12">MỨC ẢNH HƯỞNG MÔI TRƯỜNG</h3>
         <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ formatNumber(this.totalPoint) }}</h3>
         <img v-if="this.totalPoint <= 10" src="~/static/img/image_header_lv1.png">
         <img v-if="this.totalPoint > 10 && this.totalPoint <= 20" src="~/static/img/image_header_lv2.png">
@@ -75,7 +75,7 @@
       </div>
       <div class="mb-8 w-full flex justify-center">
         <button @click="completePrepare()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain">
-          <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">ĐÃ SOẠN XONG</span>
+          <span class="text-blue1 tracking-wide font-livic-bold normal-case font-bold">ĐÃ SOẠN XONG</span>
         </button>
       </div>
     </div>
@@ -92,7 +92,7 @@
       <Info v-if="!!openInfo" @closeInfo="toggleInfo(false)" />
       <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)" />
       <div class="flex flex-col items-center">
-        <h3 class="font-bold text-2xl text-center font-phu-du text-white1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
+        <h3 class="font-bold text-xl text-center font-livic-bold text-white1 mt-12">MỨC ẢNH HƯỞNG MÔI TRƯỜNG</h3>
         <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-white1">{{ this.itemChosen.point }}</h3>
         <img class="w-1/4 my-6" :src="require(`~/static/img/${itemChosen.image}`)">
         <h5 class="font-bold text-2xl text-center font-phu-du text-white1">{{ this.itemChosen.name }}</h5>
@@ -102,10 +102,10 @@
       <div class="mb-5 w-full flex items-center flex-col">
         <button @click="showItemReplace()"
           class="bg-button-fill-white w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5">
-          <span class="text-black tracking-wide font-phu-du normal-case font-bold">THAY LỰA CHỌN "XANH" HƠN</span>
+          <span class="text-black tracking-wide normal-case font-bold">THAY LỰA CHỌN "XANH" HƠN</span>
         </button>
         <button @click="usePlastic()" class="bg-button-border-white w-full h-12 bg-center bg-no-repeat bg-contain">
-          <span class="text-white1 tracking-wide font-phu-du normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
+          <span class="text-white1 tracking-wide normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
         </button>
       </div>
     </div>
@@ -114,7 +114,7 @@
     <div class="itemDetail flex flex-col items-center min-h-screen"
       v-if="this.screenIsShowing === listScreen?.itemReplace">
       <div class="flex flex-col items-center">
-        <h3 class="font-bold text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
+        <h3 class="font-bold text-xl text-center font-livic-bold text-blue1 mt-12">MỨC ẢNH HƯỞNG MÔI TRƯỜNG</h3>
         <swiper class="swipperReplace" :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
           :slides-per-view="1" :navigation="true" @slideChange="onSlideChangeItemReplace">
           <swiper-slide v-for="n in itemChosen.listItemReplace.length" :key="n" :class="{ w_100px: true }">
@@ -131,10 +131,10 @@
             <div class="mb-5 w-full flex items-center flex-col">
               <button @click="chooseItemReplace(n - 1)"
                 class="bg-button bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
-                <span class="text-white1 tracking-wide font-phu-du normal-case font-bold">DÙNG LỰA CHỌN NÀY</span>
+                <span class="text-white1 tracking-wide normal-case font-bold">DÙNG LỰA CHỌN NÀY</span>
               </button>
               <button @click="usePlastic()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
-                <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
+                <span class="text-blue1 tracking-wide normal-case font-bold">TÔI THÍCH DÙNG "NHỰA" CƠ!</span>
               </button>
             </div>
           </swiper-slide>
@@ -146,7 +146,7 @@
     <div class="itemDetail flex flex-col items-center min-h-screen justify-between"
       v-if="this.screenIsShowing === listScreen?.itemsPicked">
       <div class="flex flex-col items-center">
-        <h3 class="font-bold text-2xl text-center font-phu-du text-blue1 mt-12">ĐIỂM HẠI MÔI TRƯỜNG</h3>
+        <h3 class="font-bold text-xl text-center font-livic-bold text-blue1 mt-12">MỨC ẢNH HƯỞNG MÔI TRƯỜNG</h3>
         <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ (this.totalPoint.toFixed(2)) }}</h3>
         <div class="flex flex-row justify-between w-90 mt-5">
           <h3 class="uppercase font-bold text-lg text-center font-phu-du text-blue1">Sản phẩm đã chọn</h3>
@@ -183,11 +183,11 @@
       </div>
       <div class="mb-5 w-full flex items-center flex-col">
         <button @click="backToPreparation()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
-          <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">ĐỂ TÔI CÂN NHẮC THÊM!</span>
+          <span class="text-blue1 tracking-wide normal-case font-bold">ĐỂ TÔI CÂN NHẮC THÊM!</span>
         </button>
 
         <button @click="showResult()" class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3">
-          <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">TÔI CHẮC CHẮN VỚI LỰA CHỌN NÀY</span>
+          <span class="text-blue1 tracking-wide normal-case font-bold">TÔI CHẮC CHẮN VỚI LỰA CHỌN NÀY</span>
         </button>
       </div>
     </div>
@@ -253,7 +253,7 @@
         </button> -->
         <ShareNetwork network="facebook" :url="getSharingUrl()" hashtags="kiengnhua">
           <button class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
-            <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
+            <span class="text-blue1 tracking-wide normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
           </button>
         </ShareNetwork>
       </div>
@@ -283,14 +283,7 @@ const listScreen = {
 }
 export default {
   head: {
-    title: 'Soan do',
-    meta: [
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: 'Soan do nao'
-      }
-    ],
+    meta: [],
   },
   components: {
     Swiper,
@@ -582,4 +575,8 @@ a.share-network-facebook {
 }
 .w_100px {
   width: 390px !important;
-}</style>
+}
+button {
+  font-family: 'LivvicBold' !important;
+}
+</style>
