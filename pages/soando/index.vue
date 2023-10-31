@@ -116,12 +116,12 @@
       <div class="flex flex-col items-center">
         <h3 class="font-bold text-xl text-center font-livic-bold text-blue1 mt-12">MỨC ẢNH HƯỞNG MÔI TRƯỜNG</h3>
         <swiper class="swipperReplace" :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
-          :slides-per-view="1" :navigation="true" @slideChange="onSlideChangeItemReplace">
+          :slides-per-view="1" :pagination="{ clickable: true }" :navigation="true" @slideChange="onSlideChangeItemReplace">
           <swiper-slide v-for="n in itemChosen.listItemReplace.length" :key="n" :class="{ w_100px: true }">
             <div class="flex flex-col items-center">
               <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">{{ itemChosen.listItemReplace[n -
                 1].pointOfItemReplace }}</h3>
-              <img class="w-1/4 my-10"
+              <img class="imageReplace my-10"
                 :src="require(`~/static/img/${itemChosen.listItemReplace[n - 1].imageOfItemReplace}`)">
               <h5 class="font-bold text-2xl text-center font-phu-du text-blue1">{{ itemChosen.listItemReplace[n -
                 1].nameOfItemReplace }}</h5>
@@ -196,64 +196,26 @@
     <div class="itemDetail flex flex-col items-center min-h-screen justify-between bg-blue1"
       v-if="this.screenIsShowing === listScreen?.result">
       <div class="flex flex-col items-center justify-center">
-        <div v-show="this.totalPoint <= 10">
-          <img class="imageHeader" src="~/static/img/level1.png">
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Bạn đã "kiêng nhựa" thành công với điểm
-            hại môi trường là</h4>
-          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
+        <div>
+          <img class="imageHeader" :src="getImageResult(this.totalPoint)">
+          <h4 class="font-livic-bold text-white1 text-center ml-12 mr-12 mt-10 uppercase tracking-tighter" v-html="getResultText(this.totalPoint)"></h4>
+          <h4 class="font-livic-bold text-cyan1 text-7xl text-center font-bold mb-5">{{ formatNumber(this.totalPoint) }}
           </h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
+          <h4 class="font-livic-bold text-white1 text-center ml-24 mr-24 mt-4 uppercase text-sm tracking-tighter">Trước khi "kiêng nhựa",</h4>
+          <h4 class="font-livic-bold text-white1 text-center ml-18 mr-18 uppercase text-sm tracking-tighter"> điểm hại môi
             trường của bạn là</h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
-          }}
-          </h4>
-        </div>
-        <div v-show="this.totalPoint > 10 && this.totalPoint <= 20">
-          <div class="w-85 h-auto"><img class="imageHeader" src="~/static/img/level2.png"></div>
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Thêm chút nỗ lực, bạn sẽ "kiêng nhựa"
-            tốt
-            hơn cả điểm bên dưới</h4>
-          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
-          </h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
-            trường của bạn là</h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
-          }}
-          </h4>
-        </div>
-        <div v-show="this.totalPoint > 20 && this.totalPoint <= 30">
-          <img class="imageHeader" src="~/static/img/level3.png">
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Còn rất nhiều sản phẩm thay thế cho hành
-            lý của bạn "xanh" hơn</h4>
-          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
-          </h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
-            trường của bạn là</h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
-          }}
-          </h4>
-        </div>
-        <div v-show="this.totalPoint > 30">
-          <img class="imageHeader" src="~/static/img/level4.png">
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Hãy "kiêng nhựa" ngay và luôn để giảm
-            điểm
-            hại môi trường dưới đây</h4>
-          <h4 class="font-phu-du text-cyan1 text-5xl text-center font-bold mt-2 mb-5">{{ formatNumber(this.totalPoint) }}
-          </h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 mt-4 font-semibold">Trước khi "kiêng nhựa", điểm hại môi
-            trường của bạn là</h4>
-          <h4 class="font-phu-du text-white1 text-center mx-8 font-bold text-3xl">{{ formatNumber(this.totalPointBefore)
+          <h4 class="font-livic-bold text-white1 text-center mx-8 uppercase text-xl">{{ formatNumber(this.totalPointBefore)
           }}
           </h4>
         </div>
       </div>
       <div class="mb-5 w-full flex items-center flex-col">
         <!-- <button @click="shareFB()" class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
-          <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
+          <span class="text-blue1 tracking-wide font-livic-bold normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
         </button> -->
         <ShareNetwork network="facebook" :url="getSharingUrl()" hashtags="kiengnhua">
-          <button class="bg-button-fill-white bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5">
-            <span class="text-blue1 tracking-wide normal-case font-bold">Chia sẻ thành quả "kiêng nhựa"</span>
+          <button class="bg-button-fill-white bg-center w-full share-btn bg-no-repeat bg-contain mb-3 mt-5">
+            <span class="text-blue1 tracking-tigher font-livic-bold normal-case font-bold">CHIA SẺ THÀNH QUẢ "KIÊNG NHỰA"</span>
           </button>
         </ShareNetwork>
       </div>
@@ -376,6 +338,36 @@ export default {
         this.itemChosen.isPicked = true;
         this.indexOfItemChosen = index;
         this.screenIsShowing = listScreen.itemDetail;
+      }
+    },
+
+    getImageResult(point) {
+      if (point <= 10) {
+        return require('~/static/img/level1.png');
+      }
+      if (point <= 20 && point > 10) {
+        return require('~/static/img/level2.png');
+      }
+      if (point <= 30 && point > 20) {
+        return require('~/static/img/level3.png');
+      }
+      if (point > 30) {
+        return require('~/static/img/level4.png');
+      }
+    },
+
+    getResultText(point) {
+      if (point <= 10) {
+        return "Bạn đã \"kiêng nhựa\" thành công với điểm hại môi trường là";
+      }
+      if (point <= 20 && point > 10) {
+        return "Thêm chút nỗ lực, bạn sẽ <br> \"kiêng nhựa\" tốt hơn cả điểm bên dưới";
+      }
+      if (point <= 30 && point > 20) {
+        return "Còn rất nhiều sản phẩm thay thế cho hành lý của bạn \"xanh\" hơn";
+      }
+      if (point > 30) {
+        return "Hãy \"kiêng nhựa\" ngay và luôn để giảm điểm hại môi trường dưới đây";
       }
     },
 
@@ -566,17 +558,32 @@ a.share-network-facebook {
   width: 390px;
 }
 
+.swipperReplace > .swiper-pagination {
+  top: 48% !important;
+}
+
 .swiper-slide-active {
   display: flex;
   flex-direction: column;
 }
 .imageHeader {
-  scale: 0.8;
+  width: 66%;
+  margin-left: 17%;
+  margin-top: 22%;
 }
 .w_100px {
   width: 390px !important;
 }
 button {
   font-family: 'LivvicBold' !important;
+}
+
+.share-btn {
+  height: 3.25rem;
+}
+
+.imageReplace {
+  min-width: 50px;
+  max-height: 200px;
 }
 </style>

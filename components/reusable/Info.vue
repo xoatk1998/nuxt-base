@@ -6,9 +6,9 @@
       </div>
       <div class="w-full mx-auto flex flex-col items-center mt-5">
         <img src="~/static/img/info/kieng_nhua_la_cai_chi.png" title="kieng nhua la cai chi" alt="kieng_nhua_la_cai_chi">
-        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4 !normal-case">
+        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4 !normal-case tracking-tighter leading-5">
           Có thể bạn đã quen thuộc với những vật phẩm nhựa dùng một lần phổ biến nhất. Nhưng bạn có biết mức ảnh hưởng môi trường môi trường của chúng không?</p>
-        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4 !normal-case">
+        <p class="break-words text-center text-blue1 font-livic text-base font-normal mt-5 px-4 !normal-case tracking-tighter leading-5">
           Website Kiêng Nhựa hy vọng có thể giúp bạn dễ dàng tra cứu mức độ ảnh hưởng môi trường của từng món đồ quen dùng, từ đó đề xuất những biện pháp giảm 
           thiểu, tái sử dụng và thay thế bằng các sản phẩm thân thiện môi trường hơn. Bảng tra cứu đưa ra mức độ ảnh hưởng môi trường theo <strong>điểm từ 0 tới
             10</strong>, trong
@@ -24,10 +24,10 @@
         <img class="honDao" src="~/static/img/hon_dao.png">
         <div class="w-full flex flex-col items-center justify-center gap-2 mt-3 mb-5 px-4">
           <button class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain" @click="showSlide()">
-            <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">
+            <span class="text-blue1 tracking-wide font-livic-bold normal-case font-bold">
               HƯỚNG DẪN "KIÊNG NHỰA"</span></button>
           <button class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain" @click="showSlide()">
-            <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">
+            <span class="text-blue1 tracking-wide font-livic-bold normal-case font-bold">
               TRÍCH NGUỒN NGHIÊN CỨU</span></button>
         </div>
       </div>

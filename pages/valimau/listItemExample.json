@@ -3,93 +3,105 @@
     {
       "id": 1,
       "name": "Bình giữ nhiệt",
-      "description": "Thay thế cho chai nhựa để chuyến khám phá nhà tù côn đảo không lo mất nước",
+      "description": "Để chuyến khám phá Vinpearl Safari không còn là nỗi lo thiếu nước",
       "point": 2.2
     },
     {
       "id": 2,
-      "name": "Chai đựng sữa tắm tái sử dụng",
-      "description": "Thay thế cho chai nhựa để chuyến khám phá nhà tù côn đảo không lo mất nước",
+      "name": "Chai chiết dầu gội, sữa tắm",
+      "description": "Để giữ ngoại hình hoàn hảo trong suốt chuyến du lịch",
       "point": 1.76
     },
     {
       "id": 3,
       "name": "Xà phòng bánh",
-      "description": "Thay thế cho dây dầu gội, sữa tắm để luôn sảng khoái mọi cuộc vui",
+      "description": "Thay thế cho dây dầu gội, sữa tắ cho mình sạch sẽ mọi lúc,tươi tắn mọi nơi",
       "point": 0
     },
     {
       "id": 4,
-      "name": "Cốc làm từ thủy tinh tái sử dụng",
+      "name": "Cốcthủy tinh tái sử dụng",
       "description": "Thay thế cho cốc nhựa dùng một lần thưởng thức những thức uống mới lạ",
       "point": 2.93
     },
     {
       "id": 5,
-      "name": "Túi tote",
-      "description": "Thay thế cho túi nilon mang theo kỉ niệm ở Hòn Bảy Cạnh về nhà",
+      "name": "Túi vải bọc vali",
+      "description": "Thay thế cho túi nilon, sành điệu cho mọi điểm đến",
       "point": 3.51
     },
     {
       "id": 6,
-      "name": "Hộp đựng thực phẩm tái sử dụng",
-      "description": "Thay thế cho hộp xốp dùng một lần để “ăn sập” món ngon chợ đêm",
-      "point": 2.64
+      "name": "Túi tote",
+      "description": "Thay thế cho túi nilon mang theo những món quà lưu niệm ý nghĩa",
+      "point": 3.51
     },
     {
       "id": 7,
-      "name": "Dụng cụ đồ ăn làm từ thép ko gỉ",
+      "name": "Phao bơi",
+      "description": "Thay thế cho phao xốp hình ống để bé an toàn thỏa sức bơi",
+      "point": 4.27
+    },
+    {
+      "id": 8,
+      "name": "Hộp đựng thực phẩm tái sử dụng",
+      "description": "Thay thế cho hộp xốp dùng một lần mang những món ăn thật ngon tại chợ đêm",
+      "point": 2.64
+    },
+    {
+      "id": 9,
+      "name": "Dụng cụ ăn uống tái sử dụng",
       "description": "Thay thế cho dụng cụ ăn uống dùng một lần vì những buổi picnic hạnh phúc bên gia đình",
       "point": 3.04
     },
     {
-      "id": 8,
-      "name": "Ống hút thủy tinh",
-      "description": "Thay thế cho cốc nhựa thưởng thức nước trái cây tươi mát",
-      "point": 2.93
+      "id": 10,
+      "name": "Ống hút tái sử dụng",
+      "description": "Thay thế cho ống hút nhựa thưởng thức nước trái cây thật tươi ngon",
+      "point": 3.01
     }
   ],
   "PHU_QUOC": [
     {
       "id": 1,
       "name": "BÌNH GIỮ NHIỆT",
-      "description": "Thay thế cho chai nhựa để chuyến khám phá nhà tù côn đảo không lo mất nước",
+      "description": "Để chuyến khám phá Vinpearl Safari không còn là nỗi lo thiếu nướớc",
       "point": 2.2
     },
     {
       "id": 2,
-      "name": "Chai đựng sữa tắm tái sử dụng",
-      "description": "Thay thế cho chai nhựa để chuyến khám phá Phú Quốc không lo mất nước",
+      "name": "Chai chiết dầu gội, sữa tắg",
+      "description": "Để giữ ngoại hình hoàn hảo trong suốt chuyến du lịch",
       "point": 1.76
     },
     {
       "id": 3,
       "name": "Xà phòng bánh",
-      "description": "Thay thế cho dây dầu gội, sữa tắm để luôn sảng khoái mọi cuộc vui",
+      "description": "Thay thế cho dây dầu gội, sữa tắ cho mình sạch sẽ mọi lúc,tươi tắn mọi nơi",
       "point": 0
     },
     {
       "id": 4,
-      "name": "Túi vải bọc vali",
-      "description": "Thay thế cho bọc vali nilon sành điệu trên mọi điểm đến",
+      "name": "Túi tote",
+      "description": "Thay thế cho túi nilon mang theo những món quà lưu niệm ý nghĩa",
       "point": 3.51
     },
     {
       "id": 5,
       "name": "Túi tote",
-      "description": "Thay thế cho bao nilon mang những món quà lưu niệm ý nghĩa",
+      "description": "Thay thế cho túi nilon mang theo những món quà lưu niệm ý nghĩa",
       "point": 3.51
     },
     {
       "id": 6,
       "name": "Phao bơi",
-      "description": "Thay thế cho phao xốp hình ống dùng một lần để bé an toàn thoả sức bơi",
-      "point": 4
+      "description": "Thay thế cho phao xốp hình ống để bé an toàn thỏa sức bơi",
+      "point": 4.27
     },
     {
       "id": 7,
       "name": "Hộp đựng thực phẩm tái sử dụng",
-      "description": "Thay thế cho hộp xốp dùng một lần để “ăn sập” món ngon chợ đêm",
+      "description": "Thay thế cho hộp xốp dùng một lần mang những món ăn thật ngon tại chợ đêm",
       "point": 2.64
     },
     {
@@ -99,10 +111,10 @@
       "point": 3.04
     },
     {
-      "id": 9,
-      "name": "Ống hút thủy tinh",
+      "id": 10,
+      "name": "Ống hút tái sử dụng",
       "description": "Thay thế cho ống hút nhựa thưởng thức nước trái cây thật tươi ngon",
-      "point": 2.93
+      "point": 3.01
     }
   ]
 }
