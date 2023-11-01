@@ -11,8 +11,8 @@
         <img v-if="this.totalPoint > 30" src="~/static/img/image_header_lv4.png">
         <p class="font-livic text-center text-blue1 mx-5 my-2">Bạn đang mang theo những sản phẩm nhựa dùng một lần nào
           dưới đây?</p>
-        <swiper :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
-          :pagination="{ clickable: true }" :navigation="true" @swiper="onSwiper" @slideChange="onSlideChange"
+        <swiper class="swiper-pagination-custom" :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
+           :navigation="true" @swiper="onSwiper" @slideChange="onSlideChange"
           v-if="this.listItemPaginate?.length">
           <swiper-slide v-for="n in   3  " :key="n" class="test" :class="{ w_100: true }">
             <!-- list item in a page -->
@@ -115,7 +115,7 @@
       v-if="this.screenIsShowing === listScreen?.itemReplace">
       <div class="flex flex-col items-center">
         <h3 class="font-bold text-xl text-center font-livic-bold text-blue1 mt-12">MỨC ẢNH HƯỞNG MÔI TRƯỜNG</h3>
-        <swiper class="swipperReplace" :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
+        <swiper class="swiper-pagination-custom swipperReplace" :mousewheel="{ releaseOnEdges: false }" :loop="false" direction="horizontal"
           :slides-per-view="1" :pagination="{ clickable: true }" :navigation="true" @slideChange="onSlideChangeItemReplace">
           <swiper-slide v-for="n in itemChosen.listItemReplace.length" :key="n" :class="{ w_100px: true }">
             <div class="flex flex-col items-center">

@@ -42,7 +42,7 @@
       </div>
       <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)" />
       <h3 class="font-livic-bold text-2xl text-center text-cyan1 mt-16">Bước {{ this.step }}</h3>
-      <swiper class="info-swiper-custom" :slides-per-view="1" :pagination="true" :space-between="50" @slideChange="onSlideChange" :navigation="true">
+      <swiper class="swiper-info-custom" :slides-per-view="1" :pagination="true" :space-between="50" @slideChange="onSlideChange" :navigation="true">
         <swiper-slide>
           <img class="previewImg" src="~/static/img/huongdan/step1.png">
         </swiper-slide>
