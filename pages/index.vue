@@ -20,16 +20,16 @@ export default {
     </div>
 
     <button @click="routeTo('/soando')"
-      class="bg-button w-full bg-center h-12 bg-no-repeat bg-contain mt-10 mb-3 hover:opacity-60 mx-2">
+      class="bg-button w-full bg-center h-12 bg-no-repeat bg-contain mt-10 mb-3 mx-2">
       <span class="py-2 px1 text-white1 normal-case font-black tracking-wide">TRA CỨU NHỰA DÙNG MỘT LẦN</span>
 
     </button>
     <button @click="routeTo('/valimau')"
-      class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-3 hover:opacity-60">
+      class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-3">
       <span class="text-blue1 tracking-wide normal-case font-black">CẨM NANG DU LỊCH XANH</span>
     </button>
     <button @click="routeTo('/camket')"
-      class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-5 hover:opacity-60">
+      class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain mb-5">
       <span class="text-blue1 tracking-wide normal-case font-black">TÔI CAM KẾT "KIÊNG NHỰA"</span>
     </button>
     <iframe class="mx-auto" width="375px" height="210px"
@@ -62,7 +62,7 @@ export default {
         <div class="mt-2">Cùng học cách chuẩn bị hành trang du lịch “xanh" qua hướng dẫn dưới đây.</div>
       </div>
       <button @click="routeTo('/valimau')"
-        class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5 hover:opacity-60">
+        class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5">
         <span class="text-blue1 tracking-wide normal-case font-black">CẨM NANG DU LỊCH XANH</span>
       </button>
     </div>

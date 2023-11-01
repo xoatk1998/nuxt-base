@@ -19,7 +19,7 @@
       <div>
         <img class="honDao" src="~/static/img/hon_dao.png">
 
-        <div class="w-full flex flex-col items-center justify-center gap-2 mb-5 mt-1">
+        <div class="w-full flex flex-col items-center justify-center gap-2 mb-8 mt-1">
           <button @click="travelTo('PHU_QUOC')"
             class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain">
             <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Du lịch Phú Quốc <br> "Kiêng
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-      <div class="itemDetail mt-5" v-if="item?.name">
+      <div class="itemDetail mt-8" v-if="item?.name">
         <h3 class="uppercase text-lg text-center text-blue1 font-black font-phu-du">{{ item.name }}</h3>
         <h5 class="text-sm text-center text-blue1 font-livic mx-4">{{ item.description }}</h5>
         <h2 class="uppercase text-xl font-bold text-center mt-3 mb-2 text-blue1 font-livic-bold">MỨC ẢNH HƯỞNG MÔI TRƯỜNG
