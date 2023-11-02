@@ -32,7 +32,7 @@
           v-if="this.totalPoint > 30"
           src="~/static/img/image_header_lv4.png"
         />
-        <p class="font-livic text-center text-blue1 mx-5 my-2">
+        <p class="font-livic text-center text-blue1 mx-9 my-2">
           Bạn đang mang theo những sản phẩm nhựa dùng một lần nào dưới đây?
         </p>
         <swiper
@@ -163,7 +163,7 @@
         >
           <span
             class="text-blue1 tracking-wide font-livic-bold normal-case font-bold"
-            >ĐÃ SOẠN XONG</span
+            >ĐÃ TRA CÚU XONG</span
           >
         </button>
       </div>
