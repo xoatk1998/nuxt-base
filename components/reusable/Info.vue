@@ -90,19 +90,19 @@
       </div>
       <div class="container mx-auto flex flex-col items-center px-4 pb-8">
         <p
-          class="my-7 text-lg font-livic text-center normal-case font-black tracking-wide text-blue1 focus:underline"
+          class="mt-7 mb-6 text-lg font-livic-bold leading-5 text-center normal-case font-black text-blue1 focus:underline"
         >
           WEBSITE “KIÊNG NHỰA"<br />
           ĐƯỢC DỰA TRÊN <br />
           NHỮNG NGHIÊN CỨU SAU
         </p>
         <div
-          class="text-center mb-3 font-chu-du"
+          class="text-center mb-3 mx-6"
           v-for="(item, index) in refer"
           :key="index"
         >
-          <div class="text-blue1 font-bold text-base">{{ item.title }}</div>
-          <span class="text-white1 mx-3"
+          <div class="text-blue1 font-bold text-base font-livic-bold">{{ item.title }}</div>
+          <span class="text-white1 mx-3 font-livic leading-5"
             >"{{ item.content }}" - {{ item.author }}.</span
           >
         </div>
@@ -211,7 +211,7 @@ export default {
         {
           title: "The World Counts 2023",
           content: "How many plastic bags are used each year?",
-          author: "www.theworldcounts.com][';llllllllllllllllll']",
+          author: "www.theworldcounts.com",
         },
         {
           title: "www.ibanet.org",

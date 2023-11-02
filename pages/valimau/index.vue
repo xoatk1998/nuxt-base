@@ -1,33 +1,33 @@
 <template>
   <div class="min-h-screen bg-white1">
-    <div v-if="isChooseVali" class="flex flex-col items-center justify-between min-h-screen">
+    <div v-if="isChooseVali" class="flex flex-col items-center min-h-screen">
       <div class="flex flex-col items-center">
-        <div class="flex justify-center mx-10 mt-12">
+        <div class="flex justify-center mx-10 mt-20">
           <img src="~/static/img/luyen_cach_kieng_nhua.png" title="hoc cach kieng nhua">
         </div>
-        <h3 class="font-black text-2xl text-center font-phu-du text-blue1 mt-4 mb-2">Vì một Phú Quốc xanh, <br>Vì một Côn
+        <h3 class="font-black text-2xl text-center font-livic-bold leading-6 tracking-tight text-blue-2 mt-8 mb-2 uppercase">Vì một Phú Quốc xanh, <br>Vì một Côn
           Đảo sạch</h3>
-        <h4 class="font-livic text-blue1 w-90p text-center text-sm leading-1 font-bold">Phú Quốc và Côn Đảo là những địa điểm nổi
+        <h4 class="font-livic text-blue1 w-90p text-center text-md leading-1 font-bold">Phú Quốc và Côn Đảo là những địa điểm nổi
           tiếng nhờ vào núi non hùng vĩ, ẩm thực địa phương đặc sắc, và vì những
           địa danh lịch sử với bao câu chuyện về anh hùng dân tộc. Tuy nhiên, những năm gần đây, lượng rác thải từ hoạt
           động
           du lịch đã khiến cho môi trường của Phú Quốc và Côn Đảo trở nên ô nhiễm nghiêm trọng.</h4>
-        <h4 class="font-livic text-blue1 w-90p text-center text-sm leading-1 my-3 font-bold">Hãy cùng chung tay “kiêng rác nhựa”
+        <h4 class="font-livic text-blue1 w-90p text-center text-md leading-1 my-3 font-bold">Hãy cùng chung tay “kiêng rác nhựa”
           cho hành lý của bạn để trả lại vẻ đẹp tự nhiên cho nơi đây, và giúp cho Trái
           Đất khoẻ mạnh hơn nhé!</h4>
       </div>
       <div>
         <img class="honDao" src="~/static/img/hon_dao.png">
 
-        <div class="w-full flex flex-col items-center justify-center gap-2 mb-8 mt-1">
+        <div class="w-full flex flex-col items-center gap-2 mb-8 mt-1">
           <button @click="travelTo('PHU_QUOC')"
             class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain">
-            <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Du lịch Phú Quốc <br> "Kiêng
+            <span class="text-blue1 uppercase font-livic-bold tracking-tighter">Du lịch Phú Quốc <br> "Kiêng
               nhựa"</span>
           </button>
           <button @click="travelTo('CON_DAO')"
             class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain">
-            <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Du lịch Côn Đảo<br> "Kiêng
+            <span class="text-blue1 uppercase font-livic-bold tracking-tighter">Du lịch Côn Đảo<br> "Kiêng
               nhựa"</span>
           </button>
         </div>
@@ -227,6 +227,10 @@ img.itemConDao4 {
   transform: scale(0.6);
   margin-top: 23%;
   margin-left: 9%;
+}
+
+.text-blue-2 {
+  color: #2346d7;
 }
 
 .itemConDao1 {
