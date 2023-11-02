@@ -29,7 +29,7 @@
         dùng một lần ở khu du lịch và không sử dụng
         đồ dùng một lần trong khách sạn.
       </div>
-      <div class="w-full flex justify-center mt-5">
+      <div class="w-full flex justify-center mt-5 mb-24">
         <button @click="showCertificate()"
           class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain">
           <span class="text-blue1 tracking-wide font-phu-du normal-case font-bold">Từ nay tôi kiêng nhựa</span>
@@ -57,9 +57,9 @@
         <img src="~/static/img/huan_chuong.png">
       </div>
       </div>
-      <div class="w-full flex justify-center my-5">
+      <div class="w-full flex justify-center my-5 mb-24">
         <ShareNetwork network="facebook" :url="getSharingUrl()" hashtags="kiengnhua">
-          <button class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain">
+          <button class="bg-button-border-white bg-center h-12 bg-no-repeat bg-contain mx-auto">
             <span class="text-cyan1 tracking-wide font-phu-du normal-case font-bold">Chia sẻ cam kết</span>
           </button>
         </ShareNetwork>
@@ -134,6 +134,7 @@ input[type="file"] {
 }
 .bg-button-border-white {
   background-image: url('~/static/img/button/button_border_white.png');
+  width: 300px;
 }
 .customInput::placeholder{
   color: #7BE2E9;
@@ -143,6 +144,7 @@ input[type="file"] {
 
 a.share-network-facebook {
   width: 100%;
+  display: flex;
 }
 
 .customInput:focus, .customInput:focus-visible{

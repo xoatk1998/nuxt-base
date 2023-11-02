@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-full mx-auto bg-black-200 min-h-screen flex flex-col relative mb-64">
+  <main class="max-w-full mx-auto bg-black-200 min-h-screen flex flex-col relative">
     <div class="fixed top-7 flex justify-between w-full z-20 px-5 max-w-screen">
       <img @click="toggleMenu(true)" class="h-4 w-6 cursor-pointer" src="~/static/img/1x/back_to_home.png"
         alt="back_to_home">
