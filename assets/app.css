@@ -249,14 +249,20 @@
 
 .bg-button-border {
   background-image: url('~/static/img/button/button_border.png');
+  width: 300px;
+
 }
 
 .bg-button {
   background-image: url('~/static/img/button/button.png');
+  width: 300px;
+
 }
 
 .bg-button-border-white {
   background-image: url('~/static/img/button/button_border_white.png');
+  width: 300px;
+
 }
 
 .swiper-info-custom .swiper-button-prev::after, .swiper-pagination-custom .swiper-button-next::after{
@@ -268,7 +274,7 @@
   font-size: 20px !important;
   color: rgb(211 209 209);
   position: absolute;
-  top: -350%;
+  margin-bottom: 20px;
 }
 
 .w-90p {

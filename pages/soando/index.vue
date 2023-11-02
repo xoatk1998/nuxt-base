@@ -258,7 +258,7 @@
             :key="n"
             :class="{ w_100px: true }"
           >
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center !w-full">
               <h3
                 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1"
               >
@@ -272,17 +272,15 @@
                   }`)
                 "
               />
-              <h5 class="font-bold text-2xl text-center font-phu-du text-blue1">
+              <h5 class="font-bold text-2xl text-center font-phu-du text-blue1 w-90">
                 {{ itemChosen.listItemReplace[n - 1].nameOfItemReplace }}
               </h5>
               <h5 class="text-blue1 font-livic mt-3 text-center w-90">
                 {{ itemChosen.listItemReplace[n - 1].descriptionOfItemReplace }}
               </h5>
-            </div>
-            <div class="mb-5 w-full flex items-center flex-col">
               <button
                 @click="chooseItemReplace(n - 1)"
-                class="bg-button bg-center w-full h-12 bg-no-repeat bg-contain mb-3 mt-5"
+                class="bg-button bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5"
               >
                 <span class="text-white1 tracking-wide normal-case font-bold"
                   >DÙNG LỰA CHỌN NÀY</span
@@ -290,7 +288,7 @@
               </button>
               <button
                 @click="usePlastic()"
-                class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-3"
+                class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-8"
               >
                 <span class="text-blue1 tracking-wide normal-case font-bold"
                   >TÔI THÍCH DÙNG "NHỰA" CƠ!</span
@@ -781,18 +779,22 @@ export default {
 
 .bg-button-border {
   background-image: url("~/static/img/button/button_border.png");
+  width: 300px;
 }
 
 .bg-button {
   background-image: url("~/static/img/button/button.png");
+  width: 300px;
 }
 
 .bg-button-border-white {
   background-image: url("~/static/img/button/button_border_white.png");
+  width: 300px;
 }
 
 .bg-button-fill-white {
   background-image: url("~/static/img/button/button_fill_white.png");
+  width: 300px;
 }
 
 .bg-checkbox {
@@ -803,9 +805,6 @@ a.share-network-facebook {
   width: 100%;
 }
 
-.swipperReplace.swiper-container {
-  position: static !important;
-}
 /*
 .swiper-container {
   position: static !important;

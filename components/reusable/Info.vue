@@ -51,7 +51,7 @@
         </p>
         <img class="honDao" src="~/static/img/hon_dao.png" />
         <div
-          class="w-full flex flex-col items-center justify-center gap-2 mt-3 mb-7 px-4"
+          class="w-full flex flex-col items-center justify-center gap-2 mt-3 mb-20 px-4"
         >
           <button
             class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain"
