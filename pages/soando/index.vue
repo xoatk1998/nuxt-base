@@ -9,11 +9,11 @@
     >
       <div class="flex flex-col justify-between items-center">
         <h3
-          class="font-black text-xl text-center font-livic-bold text-blue1 mt-12"
+          class="font-black text-xl text-center font-livic-bold text-blue1 mt-20"
         >
           MỨC ẢNH HƯỞNG MÔI TRƯỜNG
         </h3>
-        <h3 class="mx-4 mt-2 mb-4 font-bold text-center text-5xl text-cyan1">
+        <h3 class="mx-4 mt-2 mb-5 font-bold text-center text-5xl text-cyan1">
           {{ formatNumber(this.totalPoint) }}
         </h3>
         <img
@@ -40,7 +40,6 @@
           :loop="false"
           direction="horizontal"
           :pagination="{ clickable: true }"
-          :navigation="true"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
           v-if="this.listItemPaginate?.length"
@@ -157,7 +156,7 @@
           </swiper-slide>
         </swiper>
       </div>
-      <div class="mb-8 w-full flex justify-center">
+      <div class="mb-8 mt-8 w-full flex justify-center">
         <button
           @click="completePrepare()"
           class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain"
@@ -444,9 +443,17 @@
           >
             <span
               class="text-blue1 tracking-tigher font-livic-bold normal-case font-bold"
-              >CHIA SẺ THÀNH QUẢ "KIÊNG NHỰA"</span
+              >CHIA SẺ THÀNH QUẢ</span
             >
           </ShareNetwork>
+        </button>
+        <button
+          @click="routeTo('/')"
+          class="bg-button-border-white w-full h-12 bg-center bg-no-repeat bg-contain"
+        >
+          <span class="text-white1 tracking-wide normal-case font-bold"
+            >TRỞ VỀ TRANG CHỦ</span
+          >
         </button>
       </div>
     </div>
@@ -519,6 +526,7 @@ export default {
       );
     },
     screenIsShowing(newValue) {
+      window.scrollTo(0,0);
       let currentItem = localStorage.getItem("items");
       if (newValue === listScreen.listItems && !currentItem) {
         this.loadData();
@@ -580,6 +588,10 @@ export default {
         this.indexOfItemChosen = index;
         this.screenIsShowing = listScreen.itemDetail;
       }
+    },
+
+    routeTo(path) {
+      this.$router.push(path);
     },
 
     getImageResult(point) {

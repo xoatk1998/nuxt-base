@@ -121,6 +121,7 @@ export default {
       this.item = listItemExample[place][itemIndex - 1];
     },
     travelTo(place) {
+      window.scrollTo(0,0);
       switch (place) {
         case this.places.CON_DAO:
           this.place = this.places.CON_DAO;
