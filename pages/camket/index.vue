@@ -50,9 +50,9 @@
         <img src="~/static/img/huan_chuong.png">
       </div>
       </div>
-      <div class="flex items-center my-5">
+      <div class="flex items-center my-5 mb-24">
         <ShareNetwork network="facebook" :url="getSharingUrl()" hashtags="kiengnhua">
-          <button class="bg-button-border-white w-full bg-center h-12 bg-no-repeat bg-contain">
+          <button class="bg-button-border-white bg-center h-12 bg-no-repeat bg-contain mx-auto">
             <span class="text-cyan1 font-livic-bold tracking-tighter uppercase font-bold">Chia sẻ cam kết</span>
           </button>
         </ShareNetwork>
@@ -128,6 +128,7 @@ input[type="file"] {
 }
 .bg-button-border-white {
   background-image: url('~/static/img/button/button_border_white.png');
+  width: 300px;
 }
 
 .commitBtn {
@@ -142,6 +143,7 @@ input[type="file"] {
 
 a.share-network-facebook {
   width: 100%;
+  display: flex;
 }
 
 .customInput:focus, .customInput:focus-visible{

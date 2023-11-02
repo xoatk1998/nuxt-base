@@ -19,7 +19,7 @@
       <div>
         <img class="honDao" src="~/static/img/hon_dao.png">
 
-        <div class="w-full flex flex-col items-center gap-2 mb-8 mt-1">
+        <div class="w-full flex flex-col items-center gap-2 mb-20 mt-3">
           <button @click="travelTo('PHU_QUOC')"
             class="bg-button-border w-full bg-center h-12 bg-no-repeat bg-contain">
             <span class="text-blue1 uppercase font-livic-bold tracking-tighter">Du lịch Phú Quốc <br> "Kiêng

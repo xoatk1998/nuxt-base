@@ -88,7 +88,7 @@
           alt="close_btn"
         />
       </div>
-      <div class="container mx-auto flex flex-col items-center px-4 pb-8">
+      <div class="container mx-auto flex flex-col items-center px-4 pb-20">
         <p
           class="mt-7 mb-6 text-lg font-livic-bold leading-5 text-center normal-case font-black text-blue1 focus:underline"
         >

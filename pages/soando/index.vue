@@ -171,7 +171,7 @@
 
     <!-- Screen show item picked detail to choose replace item or not -->
     <div
-      class="itemDetail flex flex-col items-center bg-black text-white min-h-screen z-50 justify-between"
+      class="itemDetail flex flex-col items-center bg-black text-white min-h-screen z-50"
       v-if="this.screenIsShowing === listScreen?.itemDetail"
     >
       <div class="fixed top-7 flex justify-between w-full px-3 z-20">
@@ -190,7 +190,7 @@
       </div>
       <Info v-if="!!openInfo" @closeInfo="toggleInfo(false)" />
       <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)" />
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center mb-5">
         <h3
           class="font-bold text-xl text-center font-livic-bold text-white1 mt-12"
         >
@@ -211,7 +211,7 @@
         </h5>
       </div>
 
-      <div class="mb-5 w-full flex items-center flex-col">
+      <div class="mb-20 w-full flex items-center flex-col">
         <button
           @click="showItemReplace()"
           class="bg-button-fill-white w-full bg-center h-12 bg-no-repeat bg-contain mb-3 mt-5"
