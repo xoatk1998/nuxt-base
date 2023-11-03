@@ -247,7 +247,6 @@
           :loop="false"
           direction="horizontal"
           :slides-per-view="1"
-          :pagination="{ clickable: true }"
           :navigation="true"
           @slideChange="onSlideChangeItemReplace"
         >
