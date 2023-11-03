@@ -62,12 +62,12 @@
                 <img
                   v-if="!listItemPaginate[0].notUsePlastic"
                   @click="fetchItemDetail(listItemPaginate[0].id, 0)"
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[0].image}`)"
                 />
                 <img
                   v-else
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="
                     require(`~/static/img/${listItemPaginate[0].itemReplace.imageOfItemReplace}`)
                   "
@@ -87,12 +87,12 @@
                 <img
                   v-if="!listItemPaginate[1].notUsePlastic"
                   @click="fetchItemDetail(listItemPaginate[1].id, 1)"
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[1].image}`)"
                 />
                 <img
                   v-else
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="
                     require(`~/static/img/${listItemPaginate[1].itemReplace.imageOfItemReplace}`)
                   "
@@ -112,12 +112,12 @@
                 <img
                   v-if="!listItemPaginate[2].notUsePlastic"
                   @click="fetchItemDetail(listItemPaginate[2].id, 2)"
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[2].image}`)"
                 />
                 <img
                   v-else
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="
                     require(`~/static/img/${listItemPaginate[2].itemReplace.imageOfItemReplace}`)
                   "
@@ -137,12 +137,12 @@
                 <img
                   v-if="!listItemPaginate[3].notUsePlastic"
                   @click="fetchItemDetail(listItemPaginate[3].id, 3)"
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="require(`~/static/img/${listItemPaginate[3].image}`)"
                 />
                 <img
                   v-else
-                  class="w-auto h-24 max100"
+                  class="w-auto max-h-24 max100"
                   :src="
                     require(`~/static/img/${listItemPaginate[3].itemReplace.imageOfItemReplace}`)
                   "
@@ -163,7 +163,7 @@
         >
           <span
             class="text-blue1 tracking-wide font-livic-bold normal-case font-bold"
-            >ĐÃ TRA CÚU XONG</span
+            >ĐÃ TRA CỨU XONG</span
           >
         </button>
       </div>
@@ -192,7 +192,7 @@
       <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)" />
       <div class="flex flex-col items-center mb-5">
         <h3
-          class="font-bold text-xl text-center font-livic-bold text-white1 mt-12"
+          class="font-bold text-xl text-center font-livic-bold text-white1 mt-20"
         >
           MỨC ẢNH HƯỞNG MÔI TRƯỜNG
         </h3>
@@ -200,14 +200,14 @@
           {{ this.itemChosen.point }}
         </h3>
         <img
-          class="w-1/4 my-6"
+          class="max-h-72 my-6 max-with-80"
           :src="require(`~/static/img/${itemChosen.image}`)"
         />
         <h5 class="font-bold text-2xl text-center font-phu-du text-white1">
           {{ this.itemChosen.name }}
         </h5>
-        <h5 class="text-white1 font-livic mt-3 text-center w-90">
-          {{ this.itemChosen.description }}
+        <h5 class="text-white1 font-livic mt-3 text-center w-90" v-html="this.itemChosen.description">
+          
         </h5>
       </div>
 
@@ -225,8 +225,7 @@
           class="bg-button-border-white w-full h-12 bg-center bg-no-repeat bg-contain"
         >
           <span class="text-white1 tracking-wide normal-case font-bold"
-            >TÔI THÍCH DÙNG "NHỰA" CƠ!</span
-          >
+            >TÔI KHÔNG MUỐN THAY</span>
         </button>
       </div>
     </div>
@@ -238,12 +237,12 @@
     >
       <div class="flex flex-col items-center">
         <h3
-          class="font-bold text-xl text-center font-livic-bold text-blue1 mt-12"
+          class="font-bold text-xl text-center font-livic-bold text-blue1 mt-20"
         >
           MỨC ẢNH HƯỞNG MÔI TRƯỜNG
         </h3>
         <swiper
-          class="swipperReplace"
+          class="swipperReplace swiper-pagination-custom"
           :mousewheel="{ releaseOnEdges: false }"
           :loop="false"
           direction="horizontal"
@@ -274,8 +273,7 @@
               <h5 class="font-bold text-2xl text-center font-phu-du text-blue1 w-90">
                 {{ itemChosen.listItemReplace[n - 1].nameOfItemReplace }}
               </h5>
-              <h5 class="text-blue1 font-livic mt-3 text-center w-90">
-                {{ itemChosen.listItemReplace[n - 1].descriptionOfItemReplace }}
+              <h5 class="text-blue1 font-livic mt-3 text-center w-90" v-html="itemChosen.listItemReplace[n - 1].descriptionOfItemReplace">
               </h5>
               <button
                 @click="chooseItemReplace(n - 1)"
@@ -290,7 +288,7 @@
                 class="bg-button-border bg-center w-full h-12 bg-no-repeat bg-contain mb-8"
               >
                 <span class="text-blue1 tracking-wide normal-case font-bold"
-                  >TÔI THÍCH DÙNG "NHỰA" CƠ!</span
+                  >TÔI KHÔNG MUỐN THAY</span
                 >
               </button>
             </div>
@@ -306,7 +304,7 @@
     >
       <div class="flex flex-col items-center">
         <h3
-          class="font-bold text-xl text-center font-livic-bold text-blue1 mt-12"
+          class="font-bold text-xl text-center font-livic-bold text-blue1 mt-20"
         >
           MỨC ẢNH HƯỞNG MÔI TRƯỜNG
         </h3>
@@ -413,14 +411,14 @@
             {{ formatNumber(this.totalPoint) }}
           </h4>
           <h4
-            class="font-livic-bold text-white1 text-center ml-24 mr-24 mt-4 uppercase text-sm tracking-tighter"
+            class="font-livic-bold text-white1 text-center ml-16 mr-16 mt-4 uppercase text-sm tracking-tighter"
           >
-            Trước khi "kiêng nhựa",
+            Trước khi kiêng nhựa dùng một lần,
           </h4>
           <h4
             class="font-livic-bold text-white1 text-center ml-18 mr-18 uppercase text-sm tracking-tighter"
           >
-            điểm hại môi trường của bạn là
+            mức độ ảnh hưởng môi trường của bạn là
           </h4>
           <h4
             class="font-livic-bold text-white1 text-center mx-8 uppercase text-xl"
@@ -443,7 +441,7 @@
           >
             <span
               class="text-blue1 tracking-tigher font-livic-bold normal-case font-bold"
-              >CHIA SẺ THÀNH QUẢ</span
+              >CHIA SẺ THÀNH QUẢ "KIÊNG NHỰA"</span
             >
           </ShareNetwork>
         </button>
@@ -853,5 +851,10 @@ button {
 .imageReplace {
   min-width: 50px;
   max-height: 200px;
+  max-width: 80%;
+}
+
+.max-with-80 {
+  max-width: 80%;
 }
 </style>

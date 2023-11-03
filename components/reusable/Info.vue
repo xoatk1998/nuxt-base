@@ -131,7 +131,7 @@
         Bước {{ this.step }}
       </h3>
       <swiper
-        class="info-swiper-custom"
+        class="swiper-info-custom"
         :slides-per-view="1"
         :pagination="true"
         :space-between="50"

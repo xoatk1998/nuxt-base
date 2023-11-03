@@ -7,14 +7,8 @@
         </div>
         <h3 class="font-black text-2xl text-center font-livic-bold leading-6 tracking-tight text-blue-2 mt-8 mb-2 uppercase">Vì một Phú Quốc xanh, <br>Vì một Côn
           Đảo sạch</h3>
-        <h4 class="font-livic text-blue1 w-90p text-center text-md leading-1 font-bold">Phú Quốc và Côn Đảo là những địa điểm nổi
-          tiếng nhờ vào núi non hùng vĩ, ẩm thực địa phương đặc sắc, và vì những
-          địa danh lịch sử với bao câu chuyện về anh hùng dân tộc. Tuy nhiên, những năm gần đây, lượng rác thải từ hoạt
-          động
-          du lịch đã khiến cho môi trường của Phú Quốc và Côn Đảo trở nên ô nhiễm nghiêm trọng.</h4>
-        <h4 class="font-livic text-blue1 w-90p text-center text-md leading-1 my-3 font-bold">Hãy cùng chung tay “kiêng rác nhựa”
-          cho hành lý của bạn để trả lại vẻ đẹp tự nhiên cho nơi đây, và giúp cho Trái
-          Đất khoẻ mạnh hơn nhé!</h4>
+        <h4 class="font-livic text-blue1 w-90p text-center text-md leading-1 font-bold">Phú Quốc và Côn Đảo là những địa điểm nổi tiếng nhờ vào núi non hùng vĩ, ẩm thực địa phương đặc sắc, và vì những địa danh lịch sử với bao câu chuyện về anh hùng dân tộc. Tuy nhiên, những năm gần đây, lượng rác thải từ hoạt động du lịch đã gây ra nhiều áp lực trong nỗ lực giữ gìn môi trường của Phú Quốc và Côn Đảo.</h4>
+        <h4 class="font-livic text-blue1 w-90p text-center text-md leading-1 my-3 font-bold">Hãy cùng chung tay “kiêng nhựa” cho hành lý của bạn để trả lại vẻ đẹp tự nhiên cho nơi đây, và giúp cho Trái Đất khoẻ mạnh hơn nhé!</h4>
       </div>
       <div>
         <img class="honDao" src="~/static/img/hon_dao.png">
@@ -34,7 +28,7 @@
       </div>
     </div>
     <div class="min-h-screen flex flex-col items-center" v-else>
-      <h2 class="font-black text-2xl text-center font-phu-du text-blue1 mt-14 mb-3 mx-3">Một chiếc hành lý đến {{ this.place
+      <h2 class="font-black text-xl text-center font-livic-bold uppercase text-blue1 mt-14 mb-3 mx-3">Một chiếc hành lý đến {{ this.place
         === places.CON_DAO ? 'Côn Đảo' : 'Phú Quốc' }}
         “khoẻ mạnh” vì kiêng rác nhựa </h2>
       <div class="min-w-screen bg-vali" v-if="this.place === places.CON_DAO">
@@ -88,11 +82,11 @@
         </div>
       </div>
       <div class="itemDetail mt-8" v-if="item?.name">
-        <h3 class="uppercase text-lg text-center text-blue1 font-black font-phu-du">{{ item.name }}</h3>
-        <h5 class="text-sm text-center text-blue1 font-livic mx-4">{{ item.description }}</h5>
+        <h3 class="uppercase text-lg text-center text-blue1 font-black font-livic-bold">{{ item.name }}</h3>
+        <h5 class="text-sm text-center text-blue1 font-livic mx-4 normal-case" v-html="item.description"></h5>
         <h2 class="uppercase text-xl font-bold text-center mt-3 mb-2 text-blue1 font-livic-bold">MỨC ẢNH HƯỞNG MÔI TRƯỜNG
         </h2>
-        <h2 class="uppercase text-4xl text-center text-cyan1 font-phu-du font-black">{{ item.point }}</h2>
+        <h2 class="uppercase text-4xl text-center text-cyan1 font-livic-bold font-black">{{ item.point }}</h2>
       </div>
     </div>
   </div>

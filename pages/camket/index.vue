@@ -21,7 +21,7 @@
       <div class="w-90 flex justify-center mb-3 mx-5">
         <img src="~/static/img/hr_blue.png" alt="hr">
       </div>
-      <h3 class="font-bold text-xl text-center font-livic-bold tracking-tighter text-blue1 mt-5 mb-2">CAM KẾT MỘT VALI “KIÊNG NHỰA"</h3>
+      <h3 class="font-bold text-xl text-center font-livic-bold tracking-tighter text-blue1 mt-5 mb-2">CAM KẾT MỘT VALI KHÔNG CHỨA NHỰA DÙNG MỘT LẦN</h3>
       <div class="font-livic tracking-tighter text-blue1 w-90 text-center text-base leading-1 mx-7">Vì một trái đất “xanh" và một cơ thể lành
         mạnh,
         tôi cam kết trong chuyến đi này sẽ mang theo

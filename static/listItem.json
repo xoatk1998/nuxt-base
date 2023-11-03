@@ -7,16 +7,16 @@
       "point": 7.05,
       "name": "Chai nhựa",
       "image": "newIcon/chai_nhua.png",
-      "description": "Để sản xuất ra chai nhựa dung tích 1 lít, ta phải dùng đến 3 lít nước. Dù ở nhiệt độ bình thường, khi đã chứa nước quá 10 tuần, chai nhựa sẽ thải ra độc chất DEHA và dioxin gây ung thư. Với tuổi thọ lên đến 450 năm và hơn 20.000 chiếc được tiêu thụ mỗi giây, mặc dù được làm từ nhựa PET có khả năng tái chế cao, số lượng chai nhựa khủng khiếp đã lấn át hầu như toàn bộ nỗ lực phân loại và tái chế trên thế giới.",
+      "description": " Chai nhựa hiện đang là sản phẩm rất thông dụng, được sử dụng rất phổ biến trong đời sống của mỗi người. Trong khi đó, ước tính phải mất tới 450 – 1.000 năm trong môi trường nước biển thì 1 chai nhựa mới bị phân hủy hoàn toàn. Trong suốt thời gian đó, rác thải chai nhựa sẽ mang tới nhiều ảnh hưởng xấu tới con người, môi trường và cả sinh vật.",
       "listItemReplace": [
         {
           "pointOfItemReplace": 0,
-          "nameOfItemReplace": "Từ chối không sử dụng nữa",
+          "nameOfItemReplace": "Từ chối không sử dụng nữa ",
           "imageOfItemReplace": "newIcon/khong_dung_chai_nhua.png"
         },
         {
           "pointOfItemReplace": 2.2,
-          "nameOfItemReplace": "Bình giữ nhiệt bằng kim loại",
+          "nameOfItemReplace": "Bình giữ nhiệt bằng kim loại ",
           "imageOfItemReplace": "newIcon/binh_giu_nhiet.png",
           "descriptionOfItemReplace": "Tới cuối ngày nước vẫn ấm/mát như ban đầu, thích thú quá chừng!"
         },
@@ -34,7 +34,7 @@
       "point": 5.07,
       "name": "Túi Nilon",
       "image": "newIcon/tui_nilon.png",
-      "description": "Với tuổi thọ lên đến 500 năm và có hơn 160.000 chiếc được tiêu thụ mỗi giây, túi nilon có “dân số” khổng lồ trên thế giới. Khi xâm nhập vào môi trường biển, túi nilon trở thành chiếc bẫy nguy hiểm do nhiều loài sinh vật biển thường nhầm chúng với thức ăn ưa thích - sứaa biển.",
+      "description": "Với tuổi thọ lên đến 500 năm và có hơn 160.000 chiếc được tiêu thụ mỗi giây, túi nilon có “dân số” khổng lồ trên thế giới<sup>2</sup>. Khi xâm nhập vào môi trường biển, túi nilon trở thành chiếc bẫy nguy hiểm do nhiều loài sinh vật biển thường nhầm chúng với thức ăn ưa thích - sứa biển.",
       "listItemReplace": [
         {
           "pointOfItemReplace": 2.63,
@@ -53,15 +53,14 @@
     },
     {
       "id": "hop_xop",
-      "point": 10,
+      "point": 10.0,
       "name": "Hộp nhựa/Hộp xốp dùng một lần",
       "image": "newIcon/hop_xop.png",
-      "description": "Với tuổi thọ lên đến 500 năm, hộp xốp cũng là một vật cứng đầu và sẽ phân rã thành vi nhựa nếu không được xử lí đúng cách. Một khi có trong môi trường biển, nó đe dọa các sinh vật biển vì chúng có thể nuốt phải, nhầm lẫn nó với thức ăn. Hơn nữa, các chất độc hại trong polystyrene, như styrene và benzene, có thể làm ô nhiễm chuỗi thức ăn biển.",
+      "description": "Với tuổi thọ lên đến 500 năm, hộp xốp cũng là một vật cứng đầu và sẽ phân rã thành vi nhựa nếu không được xử lí đúng cách. Một khi có trong môi trường biển, nó đe dọa các sinh vật biển vì chúng có thể nuốt phải, nhầm lẫn nó với thức ăn. Hơn nữa, các chất độc hại trong polystyrene, như styrene và benzene, có thể làm ô nhiễm chuỗi thức ăn biển<sup>4</sup>.",
       "listItemReplace": [
         {
           "pointOfItemReplace": 0,
-          "nameOfItemReplace": "Từ chối không sử dụng nữa",
-          "descriptionOfItemReplace": "Thưởng thức đồ ăn tại chỗ, không xài hộp nhựa/hộp xốp dùng 1 lần để mang đi nữa",
+          "nameOfItemReplace": "Thưởng thức đồ ăn tại chỗ, không xài hộp nhựa/hộp xốp dùng 1 lần để mang đi nữa",
           "imageOfItemReplace": "newIcon/tu_choi_dung_hop_xop.png"
         },
         {
@@ -84,13 +83,13 @@
       "point": 10.0,
       "name": "Ly nhựa dùng một lần",
       "image": "newIcon/coc_nhua.png",
-      "description": "Với tần suất 1 người/ 1 ngày/ 1 ly sử dụng một lần, trung bình 1 năm cá nhân đó đã thải ra khoảng 10.5kg rác thải nhựa. 500 tỷ ly nhựa được tiêu thụ mỗi năm, mỗi chiếc ly có tuổi thọ lên đến 450 năm, bạn có thể tưởng tượng được lượng rác thải khổng lồ chỉ của riêng ly nhựa. Khi thải ra môi trường biển, ly nhựa sẽ trở thành “ngôi nhà” của các loài sinh vật biển, đôi khi khiến chúng chết ngạt. ",
+      "description": "Với tần suất 1 người/ 1 ngày/ 1 ly sử dụng một lần, trung bình 1 năm cá nhân đó đã thải ra khoảng 10.5kg rác thải nhựa. 500 tỷ ly nhựa được tiêu thụ mỗi năm, mỗi chiếc ly có tuổi thọ lên đến 450 năm, bạn có thể tưởng tượng được lượng rác thải khổng lồ chỉ của riêng ly nhựa. Khi thải ra môi trường biển, ly nhựa sẽ trở thành “ngôi nhà” của các loài sinh vật biển, đôi khi khiến chúng chết ngạt<sup>5</sup>. ",
       "listItemReplace": [
         {
           "pointOfItemReplace": 2.93,
           "nameOfItemReplace": "Cốc làm từ thuỷ tinh sử dụng dụng nhiều lần",
           "imageOfItemReplace": "newIcon/coc_thuy_tinh.png",
-          "descriptionOfItemReplace": "Chiếc cốc xinh xắn lấp lánh dưới ánh mặt trời, lại còn \"chung thủy\" lâu dài nữa chứ!"
+          "descriptionOfItemReplace": "Chiếc cốc xinh xắn lấp lánh dưới ánh mặt trời, lại còn “chung thủy” lâu dài nữa chứ!"
         },
         {
           "pointOfItemReplace": 4.27,
@@ -112,7 +111,7 @@
       "point": 10,
       "name": "Dụng cụ ăn uống dùng một lần",
       "image": "newIcon/dung_cu_an_nhua.png",
-      "description": "Dụng cụ ăn uống dùng một lần tạo ra một lượng lớn chất thải, với hàng tỷ dụng cụ được vứt bỏ mỗi năm. Với tuổi thọ lên đến 500 năm, dao dĩa nhựa sẽ phân rã thành vi nhựa nếu không được xử lý đúng cách, ảnh hưởng đến các sinh vật sống nếu hấp thụ phải. Ngoài ra, việc sản xuất cũng đòi hỏi một lượng lớn tài nguyên tự nhiên, bao gồm nước, dầu và khí đốt, góp phần vào việc phá rừng, cạn kiệt nguồn nước và tăng lượng khí thải nhà kính.",
+      "description": "Dụng cụ ăn uống dùng một lần tạo ra một lượng lớn chất thải, với hàng tỷ dụng cụ được vứt bỏ mỗi năm. Với tuổi thọ lên đến 500 năm, dao dĩa nhựa sẽ phân rã thành vi nhựa nếu không được xử lý đúng cách, ảnh hưởng đến các sinh vật sống nếu hấp thụ phải. Ngoài ra, việc sản xuất cũng đòi hỏi một lượng lớn tài nguyên tự nhiên, bao gồm nước, dầu và khí đốt, góp phần vào việc phá rừng, cạn kiệt nguồn nước và tăng lượng khí thải nhà kính<sup>7</sup>.",
       "listItemReplace": [
         {
           "pointOfItemReplace": 3.04,
@@ -140,7 +139,7 @@
       "point": 10,
       "name": "Ống hút nhựa",
       "image": "newIcon/ong_hut_nhua.png",
-      "description": "Ống hút nhựa có tuổi thọ lên đến 200 năm và có hàng tỉ chiếc được sử dụng mỗi ngày trên toàn thế giới. Với nhiều màu sắc, khả năng uốn cong, rút ngắn hoặc phình to để phục vụ nhu cầu của con người, ống hút nhựa rất được ưa chuộng từ những tiệm trà sữa lề đường đến các nhà hàng, quán bar sang trọng. Tuy nhiên, chúng có thể mang lại đau đớn khôn cùng cho các sinh vật khác nếu vô tình chui vào cơ thể.",
+      "description": "Ống hút nhựa có tuổi thọ lên đến 200 năm<sup></sup> và có hàng tỉ<sup>9</sup> chiếc được sử dụng mỗi ngày trên toàn thế giới. Với nhiều màu sắc, khả năng uốn cong, rút ngắn hoặc phình to để phục vụ nhu cầu của con người, ống hút nhựa rất được ưa chuộng từ những tiệm trà sữa lề đường đến các nhà hàng, quán bar sang trọng. Tuy nhiên, chúng có thể mang lại đau đớn khôn cùng cho các sinh vật khác nếu vô tình chui vào cơ thể.",
       "listItemReplace": [
         {
           "pointOfItemReplace": 0,
@@ -174,7 +173,7 @@
       "point": 8.54,
       "name": "Bàn chải và kem đánh răng dùng một lần",
       "image": "newIcon/ban_chai_1_lan.png",
-      "description": "Bàn chải nhựa dùng 1 lần có tuổi đời lên đến 500 năm và mỗi chúng ta sẽ sử dụng tới 300 chiếc trong đời. Chúng xuất hiện ở tất cả các cơ sở lưu trú từ bình dân đến sang trọng, là món đồ vệ sinh rất đỗi quen thuộc nhưng gây ra vấn đề lớn hơn ta tưởng. Khi thải ra, phần lông chải sẽ phân huỷ thành vi nhựa, còn phần cán dài có thể gây nguy hiểm cho các sinh vật biển nếu bị lầm tưởng thành mồi. thành mồi.",
+      "description": "Bàn chải nhựa dùng 1 lần có tuổi đời lên đến 500 năm<sup>10</sup> và mỗi chúng ta sẽ sử dụng tới 300 chiếc trong đời. Chúng xuất hiện ở tất cả các cơ sở lưu trú từ bình dân đến sang trọng, là món đồ vệ sinh rất đỗi quen thuộc nhưng gây ra vấn đề lớn hơn ta tưởng. Khi thải ra, phần lông chải sẽ phân huỷ thành vi nhựa, còn phần cán dài có thể gây nguy hiểm cho các sinh vật biển nếu bị lầm tưởng thành mồi. thành mồi.",
       "listItemReplace": [
         {
           "pointOfItemReplace": 0,
@@ -196,7 +195,7 @@
           "pointOfItemReplace": 0,
           "nameOfItemReplace": "Xà bông cục đa năng (không bọc)",
           "imageOfItemReplace": "newIcon/xa_bong.png",
-          "descriptionOfItemReplace": ""
+          "descriptionOfItemReplace": "Đồ mình dùng quen vẫn là thích nhất. Hương thơm ấy mới dễ chịu làm sao!"
         },
         {
           "pointOfItemReplace": 1.76,
@@ -208,7 +207,7 @@
           "pointOfItemReplace": 3.53,
           "nameOfItemReplace": "Chai chiết dầu gội, sữa tắm (không thể hoàn trả cho nhà sản xuất)",
           "imageOfItemReplace": "newIcon/chai_rong_nhua_n_lan.png",
-          "descriptionOfItemReplace": ""
+          "descriptionOfItemReplace": "Đồ mình dùng quen vẫn là thích nhất. Hương thơm ấy mới dễ chịu làm sao!"
         }
       ],
       "indexOfItemReplace": 0
@@ -218,7 +217,7 @@
       "point": 8.13,
       "name": "Dép tông",
       "image": "newIcon/dep_tong.png",
-      "description": "Với giá rẻ và hợp túi tiền, dép tông trở thành loại dép phổ biến nhất thế giới. Loại dép này thường được làm bằng chất liệu xốp và được sử dụng trong thời gian ngắn rồi bị loại bỏ. Người ta ước tính rằng dép tông và những đôi giày đơn giản khác chiếm khoảng 25% rác nhựa đại dương. Sau khi bị vứt bỏ, dép tông mất hàng trăm năm để phân hủy và có thể xâm nhập vào đại dương, giết chết sinh vật biển và làm ô nhiễm nguồn nước.",
+      "description": "Với giá rẻ và hợp túi tiền, dép tông trở thành loại dép phổ biến nhất thế giới. Loại dép này thường được làm bằng chất liệu xốp và được sử dụng trong thời gian ngắn rồi bị loại bỏ. Người ta ước tính rằng dép tông và những đôi giày đơn giản khác chiếm khoảng 25% rác nhựa đại dương. Sau khi bị vứt bỏ, dép tông mất hàng trăm năm để phân hủy và có thể xâm nhập vào đại dương, giết chết sinh vật biển và làm ô nhiễm nguồn nước<sup>12</sup>.",
       "listItemReplace": [
         {
           "pointOfItemReplace": 0,
@@ -230,7 +229,7 @@
           "pointOfItemReplace": 4.06,
           "nameOfItemReplace": "Dép khách sạn bằng vải (không bao bì)",
           "imageOfItemReplace": "newIcon/dep_vai_khach_san.png",
-          "descriptionOfItemReplace": "Vừa êm chân, lại an toàn với môi trường, tội gì không dùng nhỉ!"
+          "descriptionOfItemReplace": "Vừa êm chân, lại an toàn với môi trường, tội gì không dùng nhỉ! </br /> <i>*không có sẵn trong phòng, khách sạn cung cấp nếu có nhu cầu)<i>"
         }
       ],
       "indexOfItemReplace": 0
