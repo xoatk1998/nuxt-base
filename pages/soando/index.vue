@@ -200,7 +200,7 @@
           {{ this.itemChosen.point }}
         </h3>
         <img
-          class="max-h-72 my-6 max-with-80"
+          class="w-1/4 my-6"
           :src="require(`~/static/img/${itemChosen.image}`)"
         />
         <h5 class="font-bold text-2xl text-center font-phu-du text-white1">

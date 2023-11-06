@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Bình giữ nhiệt",
-      "description": "Thay thế cho chai nhựa <br /> Để chuyến khám phá Vinpearl Safari không còn là nỗi lo thiếu nước",
+      "description": "Thay thế cho chai nhựa <br /> Khát tới mấy cũng không xả rác nhựa, giúp biển đầm trâu mãi trong xanh",
       "point": 2.2
     },
     {
@@ -14,7 +14,7 @@
     },
     {
       "id": 3,
-      "name": "Xà phòng bánh",
+      "name": "Xà phòng cục",
       "description": "Thay thế cho dây dầu gội, sữa tắm <br /> Cho mình sạch sẽ mọi lúc, tươi tắn mọi nơi",
       "point": 0
     },
@@ -45,7 +45,7 @@
     {
       "id": 8,
       "name": "Hộp đựng thực phẩm tái sử dụng",
-      "description": "Thay thế cho hộp xốp dùng một lần <br /> Mang những món ăn thật ngon tại chợ đêm",
+      "description": "Thay thế cho hộp nhựa dùng một lần <br /> Mang những món ăn thật ngon tại chợ đêm",
       "point": 2.64
     },
     {
@@ -71,12 +71,12 @@
     {
       "id": 2,
       "name": "Chai chiết dầu gội, sữa tắm",
-      "description": "Thay thế cho đồ vệ sinh cá nhân <br /> Để giữ ngoại hình hoàn hảo trong suốt chuyến du lịch",
+      "description": "Thay thế cho đồ vệ sinh cá nhân dùng một lần tại khách sạn <br /> Để giữ ngoại hình hoàn hảo trong suốt chuyến du lịch",
       "point": 1.76
     },
     {
       "id": 3,
-      "name": "Xà phòng bánh",
+      "name": "Xà phòng cục",
       "description": "Thay thế cho dây dầu gội, sữa tắm <br/> Cho mình sạch sẽ mọi lúc, tươi tắn mọi nơi",
       "point": 0
     },
@@ -111,7 +111,7 @@
       "point": 3.04
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "Ống hút tái sử dụng",
       "description": "Thay thế cho ống hút nhựa <br /> Thưởng thức nước trái cây thật tươi ngon",
       "point": 3.01

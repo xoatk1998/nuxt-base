@@ -34,20 +34,23 @@
       <div class="min-w-screen bg-vali" v-if="this.place === places.CON_DAO">
         <div class="grid grid-cols-2 gap-4">
           <div class="totePosition">
-            <img class="toteImg" src="~/static/img/vali_pq/pq_5.png" @click="showItemDetail(5, 'CON_DAO')">
+            <img class="toteImg" src="~/static/img/vali_con_dao/con_dao_6.png" @click="showItemDetail(6, 'PHU_QUOC')">
           </div>
           <div class="topRightPosition">
-            <img class="itemConDao6" src="~/static/img/vali_con_dao/con_dao_6.png" @click="showItemDetail(6, 'CON_DAO')">
-            <!-- <img class="item7" src="~/static/img/vali_pq/pq_7.png" @click="showItemDetail(7)"> -->
-            <div class="item78">
-              <img class="itemConDao7" src="~/static/img/vali_con_dao/con_dao_7.png" @click="showItemDetail(7, 'CON_DAO')">
-              <img class="itemConDao8" src="~/static/img/vali_con_dao/con_dao_8.png" @click="showItemDetail(8, 'CON_DAO')">
+            <img class="item6" src="~/static/img/vali_con_dao/con_dao_7.png" @click="showItemDetail(7, 'PHU_QUOC')">
+            <img class="item7" src="~/static/img/vali_con_dao/con_dao_8.png" @click="showItemDetail(8, 'PHU_QUOC')">
+            <div class="item89">
+              <img class="item8" src="~/static/img/vali_con_dao/con_dao_9.png" @click="showItemDetail(9, 'PHU_QUOC')">
+              <img class="item9" src="~/static/img/vali_con_dao/con_dao_10.png" @click="showItemDetail(10, 'PHU_QUOC')">
             </div>
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4 valiBottom">
           <div class="bottomLeftPosition">
-            <img class="itemConDao4" src="~/static/img/vali_con_dao/con_dao_4.png" @click="showItemDetail(4, 'CON_DAO')">
+            <div class="itemConDao45">
+              <img class="itemConDao5" src="~/static/img/vali_con_dao/con_dao_5.png" @click="showItemDetail(5, 'CON_DAO')">
+              <img class="itemConDao4" src="~/static/img/vali_con_dao/con_dao_4.png" @click="showItemDetail(4, 'CON_DAO')">
+            </div>
             <img class="itemConDao1" src="~/static/img/vali_pq/pq_1.png" @click="showItemDetail(1, 'CON_DAO')">
           </div>
           <div class="bottomRightPosition">
@@ -171,7 +174,6 @@ img.toteImg {
 .item89, .item78 {
   margin-top: -14%;
   display: flex;
-  padding-top: 7%;
 }
 
 img.item8, .itemConDao7 {
@@ -210,6 +212,7 @@ img.item1, .itemConDao1 {
 
 img.item3 {
   width: 50px;
+  margin-left: -3rem;
 }
 
 img.item2 {
@@ -229,11 +232,21 @@ img.itemConDao4 {
 }
 
 .itemConDao1 {
-  margin-top: -20%;
+  margin-top: -17%;
   margin-left: 17%;
 }
 
 .itemConDao6 {
   margin-top: 26%;
+}
+
+.itemConDao45 {
+  position: relative;
+}
+.itemConDao5 {
+  transform: scale(0.8);
+  position: absolute;
+  bottom: 5px;
+  left: 22px;
 }
 </style>
