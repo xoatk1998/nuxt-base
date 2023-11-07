@@ -5,7 +5,7 @@
         <img class="mx-3" title="toi cam ket kieng nhua" alt="toi_cam_ket_kieng_nhua"
           src="~/static/img/toi_cam_ket_title.png">
       </div>
-      <label for="file-upload">
+      <!-- <label for="file-upload">
         <div class="h-16 w-16 rounded-full flex items-center justify-center bg-black relative">
           <img class="object-cover rounded-full boder-solid h-16 w-16" :src="previewImage" :class="{ hidden: !previewImage }" />
           <img class="absolute bottom-0 right-0 h-4 w-4" src="~/static/img/button/plus.png" alt="choose">
@@ -14,7 +14,7 @@
       <label class="block">
         <span class="sr-only">Choose profile photo</span>
         <input id="file-upload" type="file" @change="handleFileUpload">
-      </label>
+      </label> -->
       <input type="text" :value="userName"
         class="mt-5 border-none bg-white1 text-center  text-cyan1 font-bold text-3xl customInput font-livic-bold tracking-tighter"
         placeholder="TÊN NGƯỜI DÙNG" @input="updateInputText" />
@@ -41,16 +41,16 @@
         <div class=" mt-20 mb-5 flex justify-center" style="width: 65%;">
         <img src="~/static/img/tu_nay_goi_toi.png">
       </div>
-      <div class="h-40 w-40 rounded-full flex items-center justify-center bg-black relative">
+      <!-- <div class="h-40 w-40 rounded-full flex items-center justify-center bg-black relative">
         <img class="h-40 w-40 object-cover rounded-full boder-solid" :src="previewImage" :class="{ hidden: !previewImage }" />
-      </div>
+      </div> -->
       <h3 class="font-livic-bold text-3xl text-cyan1 my-3 font-bold">{{ userName || '' }}</h3>
       <h4 class="font-livic-bold text-md text-white1 text-center font-bold mt-8">DETOX TRÁI ĐẤT <br/>KHỎI RÁC NHỰA DÙNG MỘT LẦN"</h4>
-      <div class="w-32 mt-5">
+      <div class="w-28 mt-24">
         <img src="~/static/img/huan_chuong.png">
       </div>
       </div>
-      <div class="flex items-center my-5 mb-24">
+      <div class="flex items-center my-5 mb-12  ">
         <ShareNetwork network="facebook" :url="getSharingUrl()" hashtags="kiengnhua">
           <button class="bg-button-border-white bg-center h-12 bg-no-repeat bg-contain mx-auto">
             <span class="text-cyan1 font-livic-bold tracking-tighter uppercase font-bold">Chia sẻ cam kết</span>

@@ -77,16 +77,16 @@ export default {
     },
     getImageUrl(pointResult) {
       if (pointResult <= 10) {
-        return 'https://i.ibb.co/zxBBxYX/review-Artboard-2.png';
+        return 'https://i.ibb.co/djLMMg7/review-WWF-Thumbnail-Lv4.png';
       }
       if (pointResult <= 20 && pointResult > 10) {
-        return 'https://i.ibb.co/zJxtXKS/review-Artboard-7.png';
+        return 'https://i.ibb.co/qn2VHHZ/review-WWF-Thumbnail-Lv3.png';
       }
       if (pointResult <= 30 && pointResult > 20) {
-        return 'https://i.ibb.co/302r5hB/review-Artboard-8.png';
+        return 'https://i.ibb.co/5hqNKJ7/review-WWF-Thumbnail-Lv2.png';
       }
       if (pointResult > 30) {
-        return 'https://i.ibb.co/51fjg6j/review-Artboard-9.png';
+        return 'https://i.ibb.co/0hQNj8G/review-WWF-Thumbnail-Lv1.png';
       }
     }
   }

@@ -32,8 +32,8 @@ export default {
       class="bg-button-border bg-center h-12 bg-no-repeat bg-contain mb-5">
       <span class="text-blue1 tracking-wide normal-case font-black">TÔI CAM KẾT "KIÊNG NHỰA"</span>
     </button>
-    <iframe class="mx-auto" width="375px" height="210px"
-      src="https://www.youtube.com/embed/rvBz2wLoDOI?si=MZD0jCJs_yeOPNDo" title="YouTube video player" frameborder="0"
+    <iframe v-show="false" class="mx-auto" width="375px" height="210px"
+      src="https://www.youtube.com/embed/xZifi9FI_w0?si=qndE39Pk6hLKOLYv" title="YouTube video player" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen></iframe>
 

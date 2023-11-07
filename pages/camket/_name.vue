@@ -31,7 +31,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: 'https://i.ibb.co/qxpZVKj/review-Artboard-10.png'
+          content: 'https://i.ibb.co/Brh01kC/review-Artboard-2-copy.png'
         },
       ]
     };
