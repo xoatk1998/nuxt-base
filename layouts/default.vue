@@ -23,7 +23,7 @@
         <p class="content-detail font-livic mb-5">Mọi vật phẩm bạn cầm tay trong chuyến du lịch của mình đều ảnh hưởng ít
           nhiều
           tới môi trường xung quanh. Hãy cùng
-          đo “mức hại” của nhựa dùng một lần cho hành lý của bạn và chuẩn bị cho|một chuyến đi gắn kết với thiên nhiên
+          đo “mức hại” của nhựa dùng một lần cho hành lý của bạn và chuẩn bị cho một chuyến đi gắn kết với thiên nhiên
           nhé.
         </p>
         <!-- <youtube class="youtube-container" :video-id="videoId" @ready="ready" @playing="playing">
@@ -68,7 +68,7 @@ export default {
       if (process.server) {
         // Server-side rendering
         const userAgent = context.req.headers['user-agent'];
-        return !/mobile/i.test(userAgent);
+        return !/mobile|facebook/i.test(userAgent);
       } else {
         // Client-side rendering
         return !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
