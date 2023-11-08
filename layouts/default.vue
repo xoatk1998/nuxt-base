@@ -28,7 +28,7 @@
         </p>
         <!-- <youtube class="youtube-container" :video-id="videoId" @ready="ready" @playing="playing">
         </youtube> -->
-        <iframe class="youtube-container"
+        <iframe v-show="false" class="youtube-container"
           src="https://www.youtube.com/embed/xZifi9FI_w0?si=qndE39Pk6hLKOLYv" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
