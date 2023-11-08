@@ -36,8 +36,11 @@
       </div> -->
         <div class="flex flex-rows mt-5">
           <img class="qr-image mr-5" src="~/static/img/qr_image.png">
-          <p class="font-livic-bold text-xl text-scan tracking-wide">SCAN QR CODE<br />ĐỂ BẮT ĐẦU<br />HÀNH
-            TRÌNH<br />"KIÊNG NHỰA"</p>
+          <p class="font-livic-bold text-xl text-scan tracking-wide">
+            BẮT ĐẦU HÀNH TRÌNH KIÊNG NHỰA <br />
+            BẰNG CÁCH TRUY CẬP <a class="underline font-bold"
+            href="https://kiengnhua.vn">KIENGNHUA.VN</a><br />
+            TRÊN MOBILE CỦA BẠN</p>
         </div>
       </div>
     </div>
