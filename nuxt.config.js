@@ -40,8 +40,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'vue-social-sharing/nuxt'
+    'vue-social-sharing/nuxt',
+    '@nuxtjs/sentry'
   ],
+  sentry: {
+    dsn: 'https://11c20020c83f0c26ecc00498686a38d2@o4506225186308096.ingest.sentry.io/4506225189519360',    
+    config: {
+      tracesSampleRate: 1.0,
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

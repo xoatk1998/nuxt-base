@@ -687,6 +687,7 @@ export default {
       );
       this.screenIsShowing = listScreen.result;
       localStorage.removeItem("items");
+      this.$sentry.captureMessage(`Soan do thanh cong, diem truoc do: ${this.totalPointBefore}, diem hien tai: ${this.totalPoint}`);
     },
     loadData() {
       const itemFromLocalStorage = localStorage.getItem("items");

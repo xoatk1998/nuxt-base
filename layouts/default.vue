@@ -1,50 +1,53 @@
 <template>
-  <main class="max-w-full mx-auto bg-black-200 min-h-screen flex flex-col relative">
-    <div v-if="!isDesktop">
-      <div class="fixed top-7 flex justify-between w-full z-20 px-5 max-w-screen">
-        <img @click="toggleMenu(true)" class="h-4 w-6 cursor-pointer" src="~/static/img/1x/back_to_home.png"
-          alt="back_to_home">
-        <img @click="toggleInfo(true)" class="h-6 w-6 cursor-pointer" src="~/static/img/info/info.png" alt="info">
-      </div>
-      <Info v-if="!!openInfo" @closeInfo="toggleInfo(false)" />
-      <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)"></Menu>
-      <transition name="fade" mode="out-in">
-        <Nuxt />
-      </transition>
-    </div>
-    <div v-else class="flex flex-row p-10 bg-white1 min-h-screen">
-      <div class="logo-container">
-        <div class="h-16 w-16 absolute"><img class="w-full h-auto" alt="home-logo" src="~/static/img/1x/home_logo.png">
+  <Sentry>
+    <main class="max-w-full mx-auto bg-black-200 min-h-screen flex flex-col relative">
+      <div v-if="!isDesktop">
+        <div class="fixed top-7 flex justify-between w-full z-20 px-5 max-w-screen">
+          <img @click="toggleMenu(true)" class="h-4 w-6 cursor-pointer" src="~/static/img/1x/back_to_home.png"
+            alt="back_to_home">
+          <img @click="toggleInfo(true)" class="h-6 w-6 cursor-pointer" src="~/static/img/info/info.png" alt="info">
         </div>
-        <img class="mx-5 earth-img" src="~/static/img/earth_in_home.png">
+        <Info v-if="!!openInfo" @closeInfo="toggleInfo(false)" />
+        <Menu v-if="!!openMenu" @closeMenu="toggleMenu(false)"></Menu>
+        <transition name="fade" mode="out-in">
+          <Nuxt />
+        </transition>
       </div>
-      <div class="text-blue1 content-container">
-        <p class="font-livic-bold text-3xl mb-5">GIẢM "ĐIỂM NHỰA"<br />TĂNG ĐIỂM XANH</p>
-        <p class="content-detail font-livic mb-5">Mọi vật phẩm bạn cầm tay trong chuyến du lịch của mình đều ảnh hưởng ít
-          nhiều
-          tới môi trường xung quanh. Hãy cùng
-          đo “mức hại” của nhựa dùng một lần cho hành lý của bạn và chuẩn bị cho một chuyến đi gắn kết với thiên nhiên
-          nhé.
-        </p>
-        <!-- <youtube class="youtube-container" :video-id="videoId" @ready="ready" @playing="playing">
+      <div v-else class="flex flex-row p-10 bg-white1 min-h-screen">
+        <div class="logo-container">
+          <div class="h-16 w-16 absolute"><img class="w-full h-auto" alt="home-logo" src="~/static/img/1x/home_logo.png">
+          </div>
+          <img class="mx-5 earth-img" src="~/static/img/earth_in_home.png">
+        </div>
+        <div class="text-blue1 content-container">
+          <p class="font-livic-bold text-3xl mb-5">GIẢM "ĐIỂM NHỰA"<br />TĂNG ĐIỂM XANH</p>
+          <p class="content-detail font-livic mb-5">Mọi vật phẩm bạn cầm tay trong chuyến du lịch của mình đều ảnh hưởng
+            ít
+            nhiều
+            tới môi trường xung quanh. Hãy cùng
+            đo “mức hại” của nhựa dùng một lần cho hành lý của bạn và chuẩn bị cho một chuyến đi gắn kết với thiên nhiên
+            nhé.
+          </p>
+          <!-- <youtube class="youtube-container" :video-id="videoId" @ready="ready" @playing="playing">
         </youtube> -->
-        <iframe v-show="false" class="youtube-container"
-          src="https://www.youtube.com/embed/xZifi9FI_w0?si=qndE39Pk6hLKOLYv" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-        <!-- <div class="youtube-container">
+          <iframe v-show="false" class="youtube-container"
+            src="https://www.youtube.com/embed/xZifi9FI_w0?si=qndE39Pk6hLKOLYv" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <!-- <div class="youtube-container">
       </div> -->
-        <div class="flex flex-rows mt-5">
-          <img class="qr-image mr-5" src="~/static/img/qr_image.png">
-          <p class="font-livic-bold text-xl text-scan tracking-wide">
-            BẮT ĐẦU HÀNH TRÌNH KIÊNG NHỰA <br />
-            BẰNG CÁCH TRUY CẬP <a class="underline font-bold"
-            href="https://kiengnhua.vn">KIENGNHUA.VN</a><br />
-            TRÊN MOBILE CỦA BẠN</p>
+          <div class="flex flex-rows mt-5">
+            <img class="qr-image mr-5" src="~/static/img/qr_image.png">
+            <p class="font-livic-bold text-xl text-scan tracking-wide">
+              BẮT ĐẦU HÀNH TRÌNH KIÊNG NHỰA <br />
+              BẰNG CÁCH TRUY CẬP <a class="underline font-bold" href="https://kiengnhua.vn">KIENGNHUA.VN</a><br />
+              TRÊN MOBILE CỦA BẠN</p>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </Sentry>
 </template>
 
 <script>
@@ -62,6 +65,8 @@ export default {
   },
   created() {
     this.isDesktop = this.checkIsDesktop(this.$nuxt.context);
+    const deviceName = this.isDesktop ? 'Desktop' : 'Mobile';
+    this.$sentry.captureMessage(`Lượt truy cập mới từ ${deviceName}`);
   },
   mounted() {
     feather.replace();
@@ -176,6 +181,7 @@ export default {
 .text-scan {
   line-height: 1.6rem;
 }
+
 .youtube-container {
   width: 83% !important;
   height: 300px !important;
