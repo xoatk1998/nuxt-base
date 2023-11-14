@@ -98,7 +98,7 @@ export default {
     },
     showCertificate() {
       window.scrollTo(0,0);
-      this.$sentry.captureMessage(`${this.userName} da cam ket kieng nhua`);
+      this.$sentry.captureMessage(`Cam ket kieng nhua`);
       this.isShowCertificte = true
     },
     updateInputText(event) {
